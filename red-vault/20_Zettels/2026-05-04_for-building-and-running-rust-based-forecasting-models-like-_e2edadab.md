@@ -1,0 +1,40 @@
+---
+title: For building and running Rust-based forecasting models like _Harbinger_, especia
+timestamp: 2026-05-04T18:00:00
+uid: e2edadab
+source: 202605041800.md
+tags: [struct:question, struct:list]
+---
+For building and running Rust-based forecasting models like _Harbinger_, especially if you're working with LSTM networks and time series data, here’s a breakdown of what your desktop should ideally have:
+
+---
+
+### 🖥️ Minimum System Requirements (for basic Rust development)
+
+- **CPU**: Dual-core 2 GHz (Intel i3 or AMD Ryzen 3)
+- **RAM**: 4 GB (Rust can run with less, but this ensures smoother compiling)
+- **Storage**: 1 GB free disk space for Rust toolchain and small projects
+- **OS**: Windows 7+, macOS 10.7+, or a modern Linux distro like Ubuntu 16.04+
+
+---
+
+### ⚡ Recommended Setup (for ML models and larger projects)
+
+- **CPU**: Quad-core or better (Intel i5, Ryzen 5, or Apple M-series)
+- **RAM**: 8–16 GB (especially helpful for training LSTM models)
+- **Storage**: SSD with at least 10–30 GB free for datasets, dependencies, and build artifacts
+- **GPU**: Optional, but not required unless you're integrating with CUDA or doing heavy parallelism
+- **OS**: Windows 10+, macOS 10.15+, or Linux (Ubuntu 20.04+ preferred)
+
+---
+
+### 🧠 Performance Tips
+
+- **SSD over HDD**: Faster compile times and data access
+- **Multi-core CPU**: Rust’s compiler (`cargo`) benefits from parallelism
+- **Swap Space**: Enable swap if RAM is limited, especially on Linux
+- **Docker**: Consider containerizing your environment for reproducibility
+
+---
+
+If you're planning to simulate symbolic overlays or run adversarial tests, I’d lean toward the higher end of that spectrum. Want help benchmarking your current setup or optimizing it for Harbinger’s architecture?

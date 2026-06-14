@@ -1,0 +1,226 @@
+ {
+  "nodes": [
+    {
+      "id": "op",
+      "type": "text",
+      "text": "Operator",
+      "x": -900,
+      "y": -200,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "aql",
+      "type": "text",
+      "text": "AQL Engine",
+      "x": -600,
+      "y": -200,
+      "width": 200,
+      "height": 70
+    },
+    {
+      "id": "aep",
+      "type": "text",
+      "text": "AEP Engine",
+      "x": -300,
+      "y": -200,
+      "width": 200,
+      "height": 70
+    },
+    {
+      "id": "lea",
+      "type": "text",
+      "text": "LEA",
+      "x": 0,
+      "y": -200,
+      "width": 200,
+      "height": 70
+    },
+    {
+      "id": "sel",
+      "type": "text",
+      "text": "SEL",
+      "x": 300,
+      "y": -200,
+      "width": 200,
+      "height": 70
+    },
+    {
+      "id": "substrate",
+      "type": "text",
+      "text": "Xi / Razor Substrate",
+      "x": 600,
+      "y": -200,
+      "width": 240,
+      "height": 80
+    },
+
+    {
+      "id": "aql-parser",
+      "type": "text",
+      "text": "Parser",
+      "x": -600,
+      "y": -320,
+      "width": 150,
+      "height": 50
+    },
+    {
+      "id": "aql-resolver",
+      "type": "text",
+      "text": "Resolver",
+      "x": -600,
+      "y": -120,
+      "width": 150,
+      "height": 50
+    },
+    {
+      "id": "aql-evaluator",
+      "type": "text",
+      "text": "Evaluator",
+      "x": -600,
+      "y": 40,
+      "width": 150,
+      "height": 50
+    },
+
+    {
+      "id": "aep-policy",
+      "type": "text",
+      "text": "Policy",
+      "x": -300,
+      "y": -320,
+      "width": 150,
+      "height": 50
+    },
+    {
+      "id": "aep-enforcer",
+      "type": "text",
+      "text": "Enforcer",
+      "x": -300,
+      "y": -120,
+      "width": 150,
+      "height": 50
+    },
+    {
+      "id": "aep-audit",
+      "type": "text",
+      "text": "Audit",
+      "x": -300,
+      "y": 40,
+      "width": 150,
+      "height": 50
+    },
+
+    {
+      "id": "lea-linter",
+      "type": "text",
+      "text": "Linter",
+      "x": 0,
+      "y": -320,
+      "width": 150,
+      "height": 50
+    },
+    {
+      "id": "lea-normalizer",
+      "type": "text",
+      "text": "Normalizer",
+      "x": 0,
+      "y": -120,
+      "width": 150,
+      "height": 50
+    },
+    {
+      "id": "lea-ln",
+      "type": "text",
+      "text": "LN Bridge",
+      "x": 0,
+      "y": 40,
+      "width": 150,
+      "height": 50
+    },
+
+    {
+      "id": "sel-logic",
+      "type": "text",
+      "text": "Exec Logic",
+      "x": 300,
+      "y": -320,
+      "width": 150,
+      "height": 50
+    },
+    {
+      "id": "sel-struct",
+      "type": "text",
+      "text": "Structure",
+      "x": 300,
+      "y": -120,
+      "width": 150,
+      "height": 50
+    },
+    {
+      "id": "sel-gate",
+      "type": "text",
+      "text": "Gate",
+      "x": 300,
+      "y": 40,
+      "width": 150,
+      "height": 50
+    },
+
+    {
+      "id": "razor-loop",
+      "type": "text",
+      "text": "Razor Loop",
+      "x": 600,
+      "y": -320,
+      "width": 170,
+      "height": 50
+    },
+    {
+      "id": "razor-gates",
+      "type": "text",
+      "text": "Invariant Gates",
+      "x": 600,
+      "y": -120,
+      "width": 170,
+      "height": 50
+    },
+    {
+      "id": "razor-spine",
+      "type": "text",
+      "text": "Invariant Spine",
+      "x": 600,
+      "y": 40,
+      "width": 170,
+      "height": 50
+    }
+  ],
+  "edges": [
+    { "id": "e-op-aql", "fromNode": "op", "toNode": "aql", "label": "permeable" },
+
+    { "id": "e-aql-parser", "fromNode": "aql", "toNode": "aql-parser", "label": "internal" },
+    { "id": "e-aql-parser-resolver", "fromNode": "aql-parser", "toNode": "aql-resolver", "label": "internal" },
+    { "id": "e-aql-resolver-evaluator", "fromNode": "aql-resolver", "toNode": "aql-evaluator", "label": "internal" },
+
+    { "id": "e-aql-aep", "fromNode": "aql-evaluator", "toNode": "aep", "label": "semi" },
+    { "id": "e-aep-policy", "fromNode": "aep", "toNode": "aep-policy", "label": "internal" },
+    { "id": "e-aep-policy-enforcer", "fromNode": "aep-policy", "toNode": "aep-enforcer", "label": "internal" },
+    { "id": "e-aep-enforcer-audit", "fromNode": "aep-enforcer", "toNode": "aep-audit", "label": "internal" },
+
+    { "id": "e-aep-lea", "fromNode": "aep-audit", "toNode": "lea", "label": "semi" },
+    { "id": "e-lea-linter", "fromNode": "lea", "toNode": "lea-linter", "label": "internal" },
+    { "id": "e-lea-linter-normalizer", "fromNode": "lea-linter", "toNode": "lea-normalizer", "label": "internal" },
+    { "id": "e-lea-normalizer-ln", "fromNode": "lea-normalizer", "toNode": "lea-ln", "label": "internal" },
+
+    { "id": "e-lea-sel", "fromNode": "lea-ln", "toNode": "sel", "label": "strict" },
+    { "id": "e-sel-logic", "fromNode": "sel", "toNode": "sel-logic", "label": "internal" },
+    { "id": "e-sel-logic-struct", "fromNode": "sel-logic", "toNode": "sel-struct", "label": "internal" },
+    { "id": "e-sel-struct-gate", "fromNode": "sel-struct", "toNode": "sel-gate", "label": "internal" },
+
+    { "id": "e-sel-substrate", "fromNode": "sel-gate", "toNode": "substrate", "label": "strict" },
+    { "id": "e-sub-loop", "fromNode": "substrate", "toNode": "razor-loop", "label": "internal" },
+    { "id": "e-loop-gates", "fromNode": "razor-loop", "toNode": "razor-gates", "label": "internal" },
+    { "id": "e-gates-spine", "fromNode": "razor-gates", "toNode": "razor-spine", "label": "internal" }
+  ]
+}
+

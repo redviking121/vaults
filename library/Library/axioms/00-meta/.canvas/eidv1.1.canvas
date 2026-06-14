@@ -1,0 +1,160 @@
+{
+  "nodes": [
+    {
+      "id": "cluster-operator",
+      "type": "group",
+      "x": -600,
+      "y": -900,
+      "width": 600,
+      "height": 400,
+      "label": "Operator Cluster",
+      "backgroundColor": "#A7E8FF"
+    },
+    {
+      "id": "cluster-aql",
+      "type": "group",
+      "x": 100,
+      "y": -900,
+      "width": 600,
+      "height": 400,
+      "label": "AQL Cluster",
+      "backgroundColor": "#FFD27A"
+    },
+    {
+      "id": "cluster-aep",
+      "type": "group",
+      "x": -600,
+      "y": -400,
+      "width": 600,
+      "height": 400,
+      "label": "AEP Cluster",
+      "backgroundColor": "#FFD27A"
+    },
+    {
+      "id": "cluster-lea",
+      "type": "group",
+      "x": 100,
+      "y": -400,
+      "width": 600,
+      "height": 400,
+      "label": "LEA Cluster",
+      "backgroundColor": "#FF9A9A"
+    },
+    {
+      "id": "cluster-sel",
+      "type": "group",
+      "x": -250,
+      "y": 50,
+      "width": 600,
+      "height": 350,
+      "label": "SEL Cluster",
+      "backgroundColor": "#A7E8FF"
+    },
+    {
+      "id": "cluster-substrate",
+      "type": "group",
+      "x": -250,
+      "y": 450,
+      "width": 600,
+      "height": 350,
+      "label": "Substrate Cluster (Xi/Razor)",
+      "backgroundColor": "#FF9A9A"
+    },
+
+    {
+      "id": "op-layer",
+      "type": "text",
+      "text": "Operator Layer\n(invokes queries/tests)",
+      "x": -550,
+      "y": -850,
+      "width": 260,
+      "height": 80
+    },
+    {
+      "id": "aql-tr",
+      "type": "text",
+      "text": "AQL Test Runner\n(Execution Harness, TR)",
+      "x": 150,
+      "y": -850,
+      "width": 260,
+      "height": 80
+    },
+    {
+      "id": "aql-engine",
+      "type": "text",
+      "text": "AQL Engine\n(Query Parser + Resolver)",
+      "x": 150,
+      "y": -750,
+      "width": 260,
+      "height": 80
+    },
+    {
+      "id": "aep-engine",
+      "type": "text",
+      "text": "AEP Engine\n(Policy + Enforcement)",
+      "x": -550,
+      "y": -350,
+      "width": 260,
+      "height": 80
+    },
+    {
+      "id": "lea-engine",
+      "type": "text",
+      "text": "LEA\n(Linter Engine Architecture)",
+      "x": 150,
+      "y": -350,
+      "width": 260,
+      "height": 80
+    },
+    {
+      "id": "sel-engine",
+      "type": "text",
+      "text": "SEL Engine\n(Structural Execution Logic)",
+      "x": -200,
+      "y": 100,
+      "width": 260,
+      "height": 80
+    },
+    {
+      "id": "substrate",
+      "type": "text",
+      "text": "Xi / Razor Substrate\n(Invariants + Decision Stability)",
+      "x": -200,
+      "y": 500,
+      "width": 300,
+      "height": 100
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-op-aqltr",
+      "fromNode": "op-layer",
+      "toNode": "aql-tr"
+    },
+    {
+      "id": "e-aqltr-aqleng",
+      "fromNode": "aql-tr",
+      "toNode": "aql-engine"
+    },
+    {
+      "id": "e-aqleng-aep",
+      "fromNode": "aql-engine",
+      "toNode": "aep-engine"
+    },
+    {
+      "id": "e-aep-lea",
+      "fromNode": "aep-engine",
+      "toNode": "lea-engine"
+    },
+    {
+      "id": "e-lea-sel",
+      "fromNode": "lea-engine",
+      "toNode": "sel-engine"
+    },
+    {
+      "id": "e-sel-substrate",
+      "fromNode": "sel-engine",
+      "toNode": "substrate"
+    }
+  ]
+}

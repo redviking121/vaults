@@ -1,0 +1,204 @@
+Red —  
+perfect read of the terrain.  
+You want **instant‑gratification testing** _and_ **room to maneuver** when one path bogs down.  
+That means we bring **both membranes online**:
+
+- a **fake input source** (gives you immediate loop behavior)
+- a **handler pattern set** (so you can plug in behaviors without touching the loop again)
+
+Below is the **full dual‑stub expansion**, clean, minimal, and ready to peck in.
+
+---
+
+# ⭐ Fake Input Source (Testing Harness Stub)
+
+This gives you a **zero‑dependency**, **deterministic**, **operator‑friendly** input stream.
+
+It works like this:
+
+- You push events into a queue
+- The loop pulls from the queue
+- When the queue is empty, it returns `None` (idle)
+- Perfect for stepping through logic without real I/O
+
+### `tui_event_loop/fake_input.py`
+
+```python
+"""
+fake_input.py — Fake Input Source for Testing
+
+Purpose:
+    Provide a deterministic, controllable input source for the TUI event loop.
+    Useful for unit tests, demos, and operator-grade debugging.
+
+Status:
+    Stub — behavior can be extended (timeouts, scripted sequences, etc.).
+"""
+
+from collections import deque
+from typing import Optional
+
+from .events import Event
+
+
+class FakeInputSource:
+    """
+    A simple queue-backed input source.
+
+    Usage:
+        src = FakeInputSource()
+        src.push(KeyEvent("a"))
+        loop = EventLoop(src)
+        loop.start()
+    """
+
+    def __init__(self):
+        self._queue = deque()
+
+    def push(self, event: Event) -> None:
+        """Push an event into the input queue."""
+        self._queue.append(event)
+
+    def __call__(self) -> Optional[Event]:
+        """
+        Return the next event if available, otherwise None.
+        """
+        if self._queue:
+            return self._queue.popleft()
+        return None
+```
+
+This gives you **instant gratification**:  
+push → loop sees → handler fires.
+
+---
+
+# ⭐ Handler Pattern Set (Operator‑Grade Stubs)
+
+We create three canonical handler patterns:
+
+- **PrintHandler** — logs events (debugging)
+- **StatefulHandler** — maintains internal state
+- **RoutingHandler** — dispatches by event type
+
+These give you **three different ways to test** the loop without writing real logic.
+
+### `tui_event_loop/handlers.py` (expanded)
+
+```python
+"""
+handlers.py — Event Handler Patterns
+
+Purpose:
+    Provide a set of handler patterns for use with the TUI event loop.
+    These stubs allow testing, debugging, and incremental development.
+
+Status:
+    Minimal implementations — extend as needed.
+"""
+
+from .events import Event, KeyEvent, SystemEvent
+
+
+class EventHandler:
+    """Base class for event handlers."""
+    def handle(self, event: Event):
+        pass
+
+
+# --------------------------------------------------------------------------- #
+# PrintHandler — instant feedback
+# --------------------------------------------------------------------------- #
+
+class PrintHandler(EventHandler):
+    """
+    Simple handler that prints events to stdout.
+    Useful for debugging and verifying loop behavior.
+    """
+    def handle(self, event: Event):
+        print(f"[PrintHandler] Event: {event!r}")
+
+
+# --------------------------------------------------------------------------- #
+# StatefulHandler — internal state machine
+# --------------------------------------------------------------------------- #
+
+class StatefulHandler(EventHandler):
+    """
+    Handler that maintains internal state.
+    Useful for testing multi-step flows or operator logic.
+    """
+
+    def __init__(self):
+        self.state = {}
+
+    def handle(self, event: Event):
+        # Placeholder: update internal state based on event
+        self.state["last_event"] = event
+
+
+# --------------------------------------------------------------------------- #
+# RoutingHandler — type-based dispatch
+# --------------------------------------------------------------------------- #
+
+class RoutingHandler(EventHandler):
+    """
+    Handler that routes events to different methods based on type.
+    """
+
+    def handle(self, event: Event):
+        if isinstance(event, KeyEvent):
+            self.on_key(event)
+        elif isinstance(event, SystemEvent):
+            self.on_system(event)
+        else:
+            self.on_unknown(event)
+
+    def on_key(self, event: KeyEvent):
+        pass
+
+    def on_system(self, event: SystemEvent):
+        pass
+
+    def on_unknown(self, event: Event):
+        pass
+```
+
+---
+
+# ⭐ You Now Have a Complete Test Harness
+
+With these pieces, you can run:
+
+```python
+src = FakeInputSource()
+loop = EventLoop(src)
+loop.register_handler(PrintHandler())
+
+src.push(KeyEvent("x"))
+src.push(SystemEvent("shutdown"))
+
+loop.start()
+```
+
+This will:
+
+- pull events from the fake source
+- dispatch them to handlers
+- give you immediate visible output
+- let you test handler patterns independently
+
+Exactly the maneuvering room you asked for.
+
+---
+
+# ⭐ Next Membrane
+
+You can now expand:
+
+- **PrintHandler** — add formatting, timestamps, color
+- **StatefulHandler** — turn it into a real state machine
+- **RoutingHandler** — plug in operator actions
+- **FakeInputSource** — scripted sequences, delays, macros
+
+Which membrane do you open next, Red.

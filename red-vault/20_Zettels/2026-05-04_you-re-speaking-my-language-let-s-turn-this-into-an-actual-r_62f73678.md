@@ -1,0 +1,185 @@
+---
+title: You’re speaking my language—let’s turn this into an actual runnable organism, no
+timestamp: 2026-05-04T20:06:00
+uid: 62f73678
+source: 202605042006.md
+tags: [status:actionable, struct:future, struct:list]
+---
+You’re speaking my language—let’s turn this into an actual runnable organism, not just a pretty diagram.
+
+---
+
+### 1. High-level shape of the game
+
+**Core idea:**  
+A persistent “Inquiry World” where:
+
+- **Players** enter as agents with roles (mythic operators, observers, builders).
+- **Threads** are first-class entities: conversations, investigations, designs, disputes.
+- **The Oracle/Threadmaster** is a system role that curates, routes, and annotates threads.
+- **The World** is a graph of spaces: rooms, tables, labs, archives—each with rules and affordances.
+
+Architecturally:
+
+- **Backend:** event-sourced, message-driven core (Rust or Go).
+- **Clients:** thin, protocol-driven (CLI, TUI, web, maybe later VR).
+- **Substrate:** everything is “events over time” + “lineage-preserving storage”.
+
+---
+
+### 2. Core domains and their responsibilities
+
+**World**
+
+- **World:** Top-level container for all spaces and rules.
+- **Space:** A room/zone with a type (debate chamber, lab, archive, arena).
+- **Artifact:** Any persistent object (note, model, rule, contract, game piece).
+
+**Sessions**
+
+- **Session:** A bounded play interval with participants, context, and goals.
+- **Scene:** A phase within a session (setup, exploration, resolution).
+- **Move:** Atomic player action (speak, propose, link, challenge, invoke operator).
+
+**Actors & roles**
+
+- **Player:** Human-controlled identity with capabilities and constraints.
+- **Role:** Mythic/operator role (Loki, Ouroboros, Threadmaster, etc.) that grants powers.
+- **Agent:** System-controlled helper (e.g., auto-linker, summarizer, referee).
+
+**Threads & Oracle**
+
+- **Thread:** A structured line of inquiry or conflict; has origin, participants, artifacts, outcomes.
+- **Oracle/Threadmaster:**
+    - Routes events to relevant threads.
+    - Enforces dialectical rules (e.g., “you must respond to the strongest version”).
+    - Maintains lineage: how ideas, rules, and artifacts evolve.
+
+---
+
+### 3. Services and where Rust/Go fit
+
+**Event core (Rust)**
+
+- **Why Rust:**
+    - Strong guarantees for concurrency and memory safety.
+    - Great for an event log + state machine core.
+- **Responsibilities:**
+    - Event ingestion and validation.
+    - State reconstruction for world, sessions, threads.
+    - Rule engine for moves and roles.
+
+**Realtime & orchestration (Go)**
+
+- **Why Go:**
+    - Simple, robust concurrency for network services.
+    - Great for websockets, rooms, matchmaking, and fan-out.
+- **Responsibilities:**
+    - Session routing (which client is in which space).
+    - Pub/sub for events to clients.
+    - Scaling out rooms and shards.
+
+**Suggested split**
+
+- **Rust service:** `core-engine`
+    
+    - API: gRPC or protobuf-based.
+    - Input: validated commands.
+    - Output: events + projections.
+- **Go service:** `gateway` / `realtime-hub`
+    
+    - Handles auth, websockets, room membership.
+    - Translates client messages → core commands; core events → client updates.
+
+You could invert the language roles if you prefer, but this split respects each language’s sweet spot.
+
+---
+
+### 4. Data, lineage, and persistence
+
+**Event store**
+
+- **Event types:** `PlayerJoined`, `MoveMade`, `ThreadCreated`, `RoleInvoked`, `ArtifactLinked`, `RuleChanged`, etc.
+- **Storage:** append-only log (Postgres + streams, or Kafka/Redpanda if you want heavier infra).
+- **Guarantee:** every state is reconstructible from events.
+
+**Projections**
+
+- **Read models:**
+    - World map (spaces, occupants).
+    - Active sessions and scenes.
+    - Thread graph (who replied to what, which artifacts are involved).
+- These are denormalized views for fast queries; can be rebuilt from the log.
+
+**Lineage / Xanadu flavor**
+
+- **Artifacts are never overwritten**, only versioned.
+- Each artifact version:
+    - Points to its predecessors.
+    - Points to the events that created/modified it.
+- This gives you:
+    - “Show me how this concept evolved across sessions.”
+    - “Show me all threads that touched this artifact.”
+
+---
+
+### 5. Protocol and client model
+
+**Protocol**
+
+- **Command messages:**
+    - `JoinSession`, `EnterSpace`, `MakeMove`, `CreateThread`, `InvokeRole`, `AttachArtifact`, etc.
+- **Event messages:**
+    - `SessionStateUpdated`, `ThreadUpdated`, `MoveApplied`, `RoleEffectApplied`, etc.
+- Use a **typed schema** (protobuf) so both Rust and Go share the same contract.
+
+**Clients**
+
+- **CLI/TUI first:**
+    - Fast to build, great for early operator-style play.
+    - Lets you dogfood the protocol without UI overhead.
+- **Web client later:**
+    - Visual world map.
+    - Thread graph visualization.
+    - Role dashboards (what powers you have, cooldowns, obligations).
+
+---
+
+### 6. Concrete implementation phases
+
+**Phase 1: Minimal loop**
+
+- **Goal:** One space, one session, basic moves.
+- **Features:**
+    - Create session, join, post moves (text).
+    - Oracle as a simple rule: e.g., enforce turn order, basic logging.
+    - Event store + projection for “session log”.
+
+**Phase 2: Threads and roles**
+
+- **Add:**
+    - Thread creation and linking.
+    - At least two roles with distinct powers (e.g., Loki can “invert” a claim; Ouroboros can “resurface” an old artifact into the current scene).
+    - Oracle logic that routes moves into threads and annotates them.
+
+**Phase 3: Spaces and world**
+
+- **Add:**
+    - Multiple spaces with different rules (lab vs. arena vs. archive).
+    - Movement between spaces.
+    - Space-specific affordances (e.g., archive can only reference, not modify).
+
+**Phase 4: Lineage views and Zettelkasten bridge**
+
+- **Add:**
+    - Export/import to your Zettelkasten/Xanadu substrate.
+    - Views like “concept evolution” and “thread genealogy”.
+    - Hooks for external tools to query the event log.
+
+---
+
+If you want, next step we can:
+
+- Pick **one concrete Phase 1 slice**,
+- Specify the **exact protobuf schema**,
+- And sketch the **Rust core-engine module layout** (crates, modules, traits) so you can start scaffolding code on your Linux box when that Wi‑Fi card finally shows up.

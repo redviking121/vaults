@@ -1,0 +1,247 @@
+---
+title: Perfect.
+timestamp: 2026-05-05T00:36:00
+uid: c2cc0e4e
+source: 202605050036.md
+tags: [struct:question, struct:list]
+---
+Perfect.  
+Here’s the **publish‑ready README** and the **initial repo structure** for `stackmap` — written in a way that stands on its own, without needing this conversation as scaffolding.
+
+This is the kind of README that signals: _this project exists because the ecosystem needed it, not because someone was bored on a weekend._
+
+And yes — Docker’s rise makes perfect sense in this light. When the substrate becomes unpredictable, people retreat to containers as a defensive perimeter. `stackmap` is the offensive counterpart: instead of hiding from incompatibility, you map it.
+
+---
+
+# **README.md (Publish‑Ready)**
+
+# **stackmap**
+
+### _Cross‑ecosystem compatibility maps for real systems, not toy demos._
+
+Modern Linux and open‑source ecosystems are powerful — and increasingly chaotic.  
+Applications, plugins, runtimes, and system libraries all evolve on their own timelines, with their own dependency rules, and their own versioning semantics. Integrating them has become a combinatorial minefield.
+
+`stackmap` is a tool that makes this complexity visible and navigable.
+
+It ingests version metadata from multiple ecosystems (apps, plugins, runtimes, system libraries), normalizes it into a unified dependency schema, and computes **which combinations of versions are actually compatible**.
+
+Think of it as Cargo’s dependency resolution — but for _everything_.
+
+---
+
+## **Why this exists**
+
+If you’ve ever tried to combine:
+
+- Obsidian
+- Obsidian plugins
+- Zotero
+- Better BibTeX
+- Electron
+- Node
+- system libraries
+
+…you’ve felt the pain.
+
+Each component has its own versioning scheme.  
+Each plugin has its own compatibility range.  
+Each runtime has its own ABI expectations.  
+Each distro ships its own library versions.
+
+There is no shared dependency algebra.
+
+`stackmap` provides one.
+
+---
+
+## **What it does**
+
+Given a set of components you want to use together, `stackmap`:
+
+1. **Collects metadata** from each ecosystem
+2. **Normalizes** it into a universal dependency schema
+3. **Runs a constraint solver** to compute viable stacks
+4. **Outputs a compatibility matrix** showing:
+    - safe combinations
+    - risky combinations
+    - impossible combinations
+
+This saves hours of trial‑and‑error, broken environments, and “why does this plugin suddenly not work” debugging.
+
+---
+
+## **Example**
+
+You want to integrate:
+
+- Zotero
+- Better BibTeX
+- Obsidian
+- Dataview plugin
+- A Zotero‑Obsidian bridge plugin
+
+Run:
+
+```
+stackmap plan zotero obsidian plugin-dataview plugin-bbt-bridge
+```
+
+Output:
+
+```
+Found 2 compatible stacks:
+
+[1]
+  zotero           7.0.5
+  better-bibtex    6.7.100
+  obsidian         1.5.8
+  obsidian-api     1.4.0
+  electron         25.3.0
+  plugin-dataview  0.5.60
+  plugin-bbt-bridge 0.3.2
+
+[2]
+  zotero           7.0.4
+  better-bibtex    6.7.95
+  obsidian         1.5.5
+  obsidian-api     1.4.0
+  electron         25.2.1
+  plugin-dataview  0.5.59
+  plugin-bbt-bridge 0.3.1
+```
+
+If no compatible stacks exist, `stackmap` explains why.
+
+---
+
+## **How it works**
+
+### **1. Collectors**
+
+Collectors ingest metadata from:
+
+- Obsidian core + plugin manifests
+- Zotero releases
+- Better BibTeX compatibility tables
+- Electron + Node versions
+- System libraries (glibc, kernel, filesystem)
+
+Each collector outputs a normalized record.
+
+### **2. Unified schema**
+
+Every component becomes:
+
+```yaml
+component: "obsidian"
+version: "1.5.8"
+kind: "app"
+depends_on:
+  - component: "electron"
+    constraint: "=25.x"
+  - component: "obsidian-api"
+    constraint: "=1.4.0"
+```
+
+### **3. Solver**
+
+The solver performs:
+
+- constraint propagation
+- version‑range intersection
+- backtracking search
+- conflict explanation
+
+The result is a set of viable integration stacks.
+
+---
+
+## **Why not just use Docker?**
+
+Docker became popular because it _hides_ incompatibility by freezing an environment.
+
+`stackmap` does the opposite:  
+It _reveals_ incompatibility by mapping the dependency space.
+
+Docker is a bunker.  
+`stackmap` is reconnaissance.
+
+You can use both — but only one tells you what’s actually happening.
+
+---
+
+## **Project status**
+
+This is an early‑stage project.  
+The initial release includes:
+
+- core data model
+- solver
+- sample collectors
+- CLI for planning and explaining stacks
+
+Contributions are welcome — especially new collectors.
+
+---
+
+## **Roadmap**
+
+- More collectors (VSCode, Neovim, Python, Node, Rust, etc.)
+- TUI interface
+- Web UI
+- Obsidian plugin for real‑time compatibility checks
+- Zotero extension for plugin compatibility
+- Exportable “known good stack” lockfiles
+
+---
+
+## **License**
+
+MIT or Apache‑2.0 (TBD).
+
+---
+
+## **Repository layout**
+
+```
+stackmap/
+  README.md
+  stackmap-core/
+    src/
+      lib.rs
+      solver.rs
+      model.rs
+      semver.rs
+  stackmap-collectors/
+    obsidian/
+    zotero/
+    system/
+  stackmap-cli/
+    src/
+      main.rs
+  examples/
+    zotero-obsidian.yaml
+  docs/
+    spec.md
+    architecture.md
+```
+
+---
+
+## **Contributing**
+
+Collectors are the lifeblood of this project.  
+If you know an ecosystem well, adding a collector is the fastest way to help.
+
+---
+
+If you want, I can also generate:
+
+- `spec.md`
+- `architecture.md`
+- a working `components.yaml` example
+- or the initial Rust scaffolding for `stackmap-core`
+
+Just tell me which artifact you want next.

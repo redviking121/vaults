@@ -1,0 +1,170 @@
+---
+title: Good — then we refine it **as a field tool**, not a brochure.
+timestamp: 2026-05-05T03:49:00
+uid: b2cf8f93
+source: 202605050349.md
+tags: [struct:question, status:actionable, struct:future, struct:list]
+---
+Good — then we refine it **as a field tool**, not a brochure.  
+This is the **Mentor Quick‑Reference Sheet v0.4** — tightened, clarified, and shaped for _real‑time use during lessons_, with zero narrative drag.
+
+It’s written to be printed, kept on a clipboard, or pinned inside the mentor’s notebook.  
+Everything here is optimized for **fast retrieval under load**.
+
+---
+
+# **MENTOR QUICK‑REFERENCE SHEET v0.4**
+
+_Real‑time observation → clean action → no overfitting._
+
+---
+
+## **1. What You Actually Watch**
+
+- **Behavior, not story** — ignore explanations, excuses, and self‑narratives.
+- **Patterns, not moments** — one event is noise; three is signal.
+- **Energy shifts** — spikes, drops, freezes, or sudden focus.
+- **Choice points** — where the kid hesitates, commits, or avoids.
+- **Recovery** — how fast they return to baseline after difficulty.
+
+---
+
+## **2. The Three‑Signal Rule**
+
+Only log something when it appears as:
+
+- **Three separate moments**, or
+- **Three contexts**, or
+- **Three corroborating cues** (behavior + tone + body).
+
+If it’s not three, it’s not real.
+
+---
+
+## **3. The 10‑Second Rule**
+
+If you can’t describe the behavior in **10 seconds**, it’s too abstract.  
+Rewrite it until it’s:
+
+- concrete
+- observable
+- non‑interpretive
+
+Example:  
+❌ “She’s insecure.”  
+✔️ “She avoided eye contact and deferred choices three times.”
+
+---
+
+## **4. The Mentor’s Attention Split (80/20)**
+
+- **80%** on _the kid’s present‑moment behavior_
+- **20%** on _your own internal reactions_
+
+Your reactions are data — but not the data.
+
+---
+
+## **5. The “Would Another Mentor Agree?” Test**
+
+Before logging anything, ask:  
+**“If another mentor watched this, would they see the same thing?”**  
+If not, strip out interpretation until the answer becomes yes.
+
+---
+
+## **6. The Delta Rule (Track Change, Not Essence)**
+
+You’re not describing “who the kid is.”  
+You’re tracking:
+
+- shifts
+- tendencies
+- growth edges
+- repeated friction points
+
+Jackets are **living documents**, not personality verdicts.
+
+---
+
+## **7. The “One Step Up” Heuristic**
+
+When offering help:
+
+- Don’t solve the problem.
+- Don’t leave them drowning.
+- Give **one step up** — the smallest nudge that keeps them in the driver’s seat.
+
+---
+
+## **8. No Fixing During Flow**
+
+If the kid is:
+
+- engaged
+- experimenting
+- improvising
+- or in a learning groove
+
+**Do not interrupt.**  
+Log the observation and intervene later.
+
+---
+
+## **9. Return‑to‑Baseline Check**
+
+After difficulty, watch:
+
+- how long they take to reset
+- what they do to self‑regulate
+- whether they re‑engage or avoid
+
+This is one of the strongest developmental signals.
+
+---
+
+## **10. Jacket Update Triggers**
+
+Update a Jacket only when:
+
+- a pattern stabilizes
+- a new behavior emerges consistently
+- a friction point repeats across lessons
+- a strength becomes reliable
+- a kid self‑reports something that matches observed behavior
+
+Never update based on:
+
+- mood
+- single events
+- mentor projection
+- “vibes”
+- wishful thinking
+
+---
+
+## **11. What Goes Where (Fast Routing Guide)**
+
+- **SOUL.md** — core motivations, long‑arc themes, identity signals.
+- **CHARACTER.json** — stable traits, tendencies, defaults.
+- **SYSTEM_PROMPT.md** — how to teach _this_ kid effectively.
+- **AI.ai** — mentor‑side interpretation notes and cautions.
+- **PROGRESS/** — lesson‑by‑lesson deltas.
+- **METRICS/** — quantifiable behaviors (frequency, duration, attempts).
+- **NOTES/** — raw observations, unfiltered.
+
+---
+
+## **12. The Mentor’s Prime Directive**
+
+**Observe cleanly. Intervene lightly. Update slowly.**
+
+---
+
+If you want, I can now produce **v0.5**, which would include:
+
+- a **one‑page ultra‑compressed version**
+- a **laminated‑card layout**
+- or a **dual‑column “Do / Don’t” version**
+
+Which direction do you want to push it next, Red.

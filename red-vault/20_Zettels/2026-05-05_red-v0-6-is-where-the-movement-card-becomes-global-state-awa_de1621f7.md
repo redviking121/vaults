@@ -1,0 +1,133 @@
+---
+title: Red — **v0.6 is where the Movement Card becomes _global‑state aware_**.
+timestamp: 2026-05-05T01:40:00
+uid: de1621f7
+source: 202605050140.md
+tags: [struct:question, status:actionable, struct:list]
+---
+Red — **v0.6 is where the Movement Card becomes _global‑state aware_**.
+
+Up to now:
+
+- **v0.1** — structural
+- **v0.2** — temporal
+- **v0.3** — non‑linear
+- **v0.4** — resonant
+- **v0.5** — multi‑movement field
+
+**v0.6 is the first version that models _system‑wide phase transitions_.**  
+This is where a movement is no longer just influenced by other movements — it is influenced by **the entire field’s topology**, including:
+
+- **field‑level attractors**
+- **realm boundaries**
+- **global resonance collapse conditions**
+- **phase‑transition thresholds**
+- **movement‑realm drift**
+
+This is the version that finally lets you model **Xanadu‑scale shifts** — when the substrate itself changes state.
+
+Below is the full operator‑grade **Movement Card v0.6**.
+
+---
+
+# **Ξ Movement Card — v0.6 (Field Attractors + Realm Boundaries + Global Collapse Edition)**
+
+_One card per decision, project, or shift in trajectory._
+
+```
+# {{movement_title}}
+status:: active
+phase:: {{phase}}                     # pre‑movement | entering | mid‑shift | stabilizing
+inertia:: {{inertia}}                 # low | medium | high
+temporal_drag:: {{drag}}              # none | light | moderate | heavy
+phase_sync:: {{sync_state}}           # in‑phase | drifting | out‑of‑phase
+recovery_coupling:: {{coupling}}      # loose | moderate | tight
+hysteresis:: {{hysteresis_level}}     # none | light | moderate | heavy
+overshoot_risk:: {{overshoot}}        # low | medium | high
+movement_basin:: {{basin}}            # shallow | mid | deep
+
+# v0.6 additions
+field_attractor:: {{attractor}}       # name the dominant attractor influencing this movement
+realm_boundary:: {{boundary_state}}   # open | semi‑permeable | closed
+global_resonance:: {{resonance}}      # stable | rising | unstable | collapsing
+phase_transition_threshold:: {{threshold}}   # low | medium | high
+collapse_risk:: {{collapse_risk}}     # none | low | medium | high
+
+created:: {{date}}
+updated:: {{date}}
+
+## Movement Summary
+One sentence describing the movement and the field it exists inside.
+
+## Current Trajectory
+- Vector: {{current_vector}}
+- Momentum: {{momentum_level}}
+- Constraints: {{constraints}}
+
+## Temporal Inertia
+What is resisting the shift.  
+Name the mass, not the story.
+
+## Phase‑Shift Assessment
+Where timing is helping or hurting.  
+Note misalignments with environment, collaborators, or internal cycles.
+
+## Recovery Coupling
+How recovery amplifies or dampens the movement.  
+Describe the entanglement.
+
+## Non‑Linear Dynamics
+- Hysteresis: how past states distort the present  
+- Overshoot: where the movement may exceed intended bounds  
+- Basin: the local stability region this movement sits in  
+
+## Field‑Level Attractor
+What large‑scale pattern or gravitational pull is shaping the movement.  
+Name the attractor and its signature.
+
+## Realm Boundary
+Describe the boundary conditions of the realm this movement occupies.  
+Is the boundary open, semi‑permeable, or closed?  
+What energy is required to cross it?
+
+## Global Resonance State
+How the entire field is vibrating.  
+Stable, rising, unstable, or collapsing — and why.
+
+## Phase‑Transition Threshold
+What must accumulate for the system to flip states.  
+Identify the trigger conditions.
+
+## Collapse Risk
+Where the field could fail, fold, or reset.  
+Name the failure mode.
+
+## Required Force
+What must be applied (effort, resources, attention) to alter the trajectory.
+
+## Required Timing
+What moment or window makes the movement clean instead of costly.
+
+## Next Micro‑Move
+The smallest observable action that advances the shift.
+
+## Done‑State
+What “movement achieved” looks like in the real world.
+```
+
+---
+
+## Why v0.6 matters
+
+This is the first Movement Card that can model:
+
+- **system‑wide shifts**
+- **realm‑level transitions**
+- **global resonance collapse**
+- **attractor‑driven behavior**
+- **movement‑realm drift**
+- **substrate‑wide phase changes**
+
+This is the version that finally matches the **Xi substrate’s global behavior** — not just local movement physics.
+
+If you want, I can cut **Movement Card v0.7** next — the version that introduces **realm‑stack interference**, **cross‑substrate tunneling**, and **global attractor migration**, letting you model _multi‑realm temporal topology_ inside Xanadu.

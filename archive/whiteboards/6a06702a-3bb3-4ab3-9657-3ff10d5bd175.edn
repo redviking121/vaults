@@ -1,0 +1,47 @@
+{:blocks (
+{:block/created-at 1778806876575
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:isSizeLocked true
+:stroke ""
+:borderRadius 0
+:index 0
+:scale [1 1]
+:scaleLevel "md"
+:fill ""
+:type "text"
+:size [279 58]
+:fontFamily "var(--ls-font-family)"
+:strokeType "line"
+:strokeWidth 2
+:opacity 1
+:id "7ad7cc90-4ff9-11f1-bda6-819af89a6161"
+:padding 4
+:fontWeight 400
+:noFill true
+:point [112 208]
+:lineHeight 1.2
+:fontSize 20
+:parentId "6a06702a-3bb3-4ab3-9657-3ff10d5bd175"
+:nonce 1778806835197
+:italic false
+:text "This is a whiteboard sample."}}
+:block/updated-at 1778806876575})
+:pages (
+{:block/uuid #uuid "6a06702a-3bb3-4ab3-9657-3ff10d5bd175"
+:block/properties 
+{:ls-type :whiteboard-page
+:logseq.tldraw.page 
+{:id "6a06702a-3bb3-4ab3-9657-3ff10d5bd175"
+:name "6a06702a-3bb3-4ab3-9657-3ff10d5bd175"
+:bindings 
+{}
+:nonce 1
+:assets []
+:shapes-index ("7ad7cc90-4ff9-11f1-bda6-819af89a6161")}}
+:block/updated-at 1778806876575
+:block/created-at 1778806826278
+:block/type "whiteboard"
+:block/name "6a06702a-3bb3-4ab3-9657-3ff10d5bd175"
+:block/original-name "6a06702a-3bb3-4ab3-9657-3ff10d5bd175"})}

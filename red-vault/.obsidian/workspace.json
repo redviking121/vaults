@@ -1,0 +1,266 @@
+{
+  "main": {
+    "id": "5dc369633e4641a4",
+    "type": "split",
+    "children": [
+      {
+        "id": "958953632f7c5c4e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a5d3def3e4e7db7a",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "Xanadu Prime Kanban.md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": [
+                    false,
+                    false
+                  ]
+                }
+              },
+              "icon": "lucide-trello",
+              "title": "Xanadu Prime Kanban"
+            }
+          },
+          {
+            "id": "653b9ad455933020",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "Xanadu Prime Kanban.md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": [
+                    false,
+                    false
+                  ]
+                }
+              },
+              "icon": "lucide-trello",
+              "title": "Xanadu Prime Kanban"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "66b308d771512aa9",
+    "type": "split",
+    "children": [
+      {
+        "id": "02a08f01266b7acb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "11730c19c315fbc9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "79a465910fa625f9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "postulate 1",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "a27ecb69dd49d4bc",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "0d10be5a35d80055",
+    "type": "split",
+    "children": [
+      {
+        "id": "3f19ab1ec0ddea40",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cd4e775ec3b93711",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Templates/The Zettel Template.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for The Zettel Template"
+            }
+          },
+          {
+            "id": "e761e451d8ac8f51",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Templates/The Zettel Template.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from The Zettel Template"
+            }
+          },
+          {
+            "id": "8cf9668f8570aee5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "3191b72f4c379f3a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "f5cdd1faaa61dd67",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
+          },
+          {
+            "id": "01bfab7096140d8b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "UnZettled/Zettelkasten Chemical Framework - Atomization Protocol.md.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Zettelkasten Chemical Framework - Atomization Protocol.md"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "omnisearch:Omnisearch": false,
+      "copilot:Open Copilot Chat": false,
+      "obsidian-kanban:Create new board": false,
+      "zk-prefixer:Create new unique note": false
+    }
+  },
+  "active": "79a465910fa625f9",
+  "lastOpenFiles": [
+    "test intake python script.md",
+    "OI realtime audio ap prompt.md",
+    "Oi optimize api prompt.md",
+    "OI migrate agents prompt.md",
+    "OI  create no code change plan prompt.md",
+    "Obsidian Zotero Batch integratrion via.md",
+    "Obsidian Vault Deployment Strategy.md",
+    "202605282002-Copilot_Experience_Log.md",
+    "C3 Creative High-Coherence Mode.md",
+    "202605282003.md",
+    "202605240703.md",
+    "202605241559.md",
+    "202605240706.md",
+    "202605240702.md",
+    "202605231818.md",
+    "202605231815.md",
+    "UnZettled/ZOTERO-9 OPERATOR CARD.md",
+    "202605231250.md",
+    "202605230716.md",
+    "UnZettled/Zotero Quick‑Tagging Keyboard Map.md",
+    "UnZettled/Zettelkasten Chemical Framework - Atomization Protocol.md.md",
+    "UnZettled/Xi Paradox Razor - Formal Paper.md",
+    "UnZettled/Xi Substrate Map.md",
+    "UnZettled/Xanadu Prime Onboarding Protocol.md",
+    "UnZettled/Xanadu Academy Onboarding Protocol.md",
+    "UnZettled/World building.md",
+    "scripts/governance_atomizer.py",
+    "scripts",
+    "copilot/copilot-conversations",
+    "copilot/copilot-custom-prompts",
+    "copilot",
+    "UnZettled",
+    "20_Zettels/Untitled",
+    "40_JIT",
+    "Templates",
+    "30_Maps"
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "main": {
+    "id": "4ce67c17333ccaf2",
+    "type": "split",
+    "children": [
+      {
+        "id": "fecf26d7de86bffd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ca7f7755cb63ad6e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00 - Templates/40 – Claim.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "40 – Claim"
+            }
+          },
+          {
+            "id": "bdcdf1b1cc91f312",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lexicon.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Lexicon"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "03a9cd027f5c435b",
+    "type": "split",
+    "children": [
+      {
+        "id": "24d6f85c9de81a84",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c691d8a081d5710a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "162b2f181943b9b9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "3a0a63a93df2ab03",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "99635484c8f7ad7b",
+    "type": "split",
+    "children": [
+      {
+        "id": "7a7aafd354f6ac30",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a2539576e26d56eb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "0a4ebfb507e5ccf2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "3fdc80bcecca94bf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a74cc18fc27d03ef",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "19e826f3a479ba4c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "120ad7a930458893",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 221.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "copilot:Open Copilot Chat": false,
+      "obsidian-kanban:Create new board": false
+    }
+  },
+  "active": "120ad7a930458893",
+  "lastOpenFiles": [
+    "copilot/copilot-conversations/Vault_Access_Initiated@20260605_143634.md",
+    "canvas 2026-03-21.canvas",
+    "2026-03-21.md",
+    "2026-03-19.md",
+    "00 - Engine Dashboard.md.md",
+    "00 - Engine Dashboard.md",
+    "20 - Xi-protocol/Xi Paradox Razor.md",
+    "15 - Lexicon/semantic-matrix.md.md",
+    "15 - Lexicon/semantic-drift.md.md",
+    "15 - Lexicon/Lineage-tree.md.md",
+    "15 - Lexicon/Lexicon.md",
+    "15 - Lexicon/cognitive-map.md.md",
+    "03_PRIME_ERA/xanadu-prime-repos.md",
+    "03_PRIME_ERA/topology-map.md",
+    "03_PRIME_ERA/technical-overview.md",
+    "03_PRIME_ERA/substrate-spec.md",
+    "03_PRIME_ERA/substrate-lifecycle.md",
+    "03_PRIME_ERA/substrate-axioms.md",
+    "03_PRIME_ERA/razor-principles.md",
+    "03_PRIME_ERA/public-faq.md",
+    "03_PRIME_ERA/public-announcement.md",
+    "03_PRIME_ERA/provenance-timeline.md",
+    "03_PRIME_ERA/prime-naming-registry.md",
+    "03_PRIME_ERA/prime-era-overview.md",
+    "03_PRIME_ERA/prime-corpus-index.md",
+    "03_PRIME_ERA/operator-doctrine.md",
+    "03_PRIME_ERA/one-page-explainer.md",
+    "03_PRIME_ERA",
+    "muse",
+    "00-Inbox/canvas 2026-03-21.canvas",
+    "50 - Operational/To Read.url",
+    "00-Inbox",
+    "dev/firstlib",
+    "dev",
+    "copilot/copilot-conversations",
+    "copilot/copilot-custom-prompts",
+    "copilot"
+  ]
+}

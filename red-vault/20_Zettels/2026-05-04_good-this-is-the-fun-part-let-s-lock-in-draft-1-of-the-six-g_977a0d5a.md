@@ -1,0 +1,172 @@
+---
+title: Good—this is the fun part. Let’s lock in Draft 1 of the six governance-layer bou
+timestamp: 2026-05-04T21:29:00
+uid: 977a0d5a
+source: 202605042129.md
+tags: [struct:question, status:actionable, status:blocked, struct:list]
+---
+Good—this is the fun part. Let’s lock in Draft 1 of the six governance-layer boundary declarations.
+
+---
+
+## Operator layer boundary
+
+**Boundary declaration:**  
+The Operator layer is the **sole source of intent, constraints, and override authority**. It defines what “valid” means for the stack.
+
+- **Edges:**
+    - **Must not:** Implement persistence, auto-mutate artifacts, or bypass Razor.
+    - **Must not:** Be implicitly inferred—Operator intent must be explicit or derived via a declared rule.
+- **Permissions:**
+    - **May request:**
+        - State views from Substrate
+        - Explanations from Demonstration Logic
+        - Renaming proposals from Naming
+        - Workflow options from Workflow
+        - Parity reports from Vault/Workspace
+- **Guarantees:**
+    - Provides explicit goals, constraints, and acceptance criteria.
+    - Provides final arbitration when Razor cannot reconcile frames.
+- **Failure modes:**
+    - **Ambiguity:** Conflicting or underspecified intent → escalated to Razor as `Operator.Ambiguous`.
+    - **Silence:** No Operator decision where required → propagation blocked at all other layers.
+- **Propagation:**
+    - **Direction:** Downward, cross-layer.
+    - **Rule:** No layer may override Operator constraints; they may only propose refinements.
+
+---
+
+## Substrate layer boundary
+
+**Boundary declaration:**  
+The Substrate layer defines the **structural and storage reality**: files, notes, directories, object graphs, and their relations.
+
+- **Edges:**
+    - **Must not:** Invent Operator intent or governance rules.
+    - **Must not:** Encode workflow semantics as structure without declaration.
+- **Permissions:**
+    - **May request:**
+        - Naming decisions from Naming
+        - Workflow hooks from Workflow
+        - Visibility rules from Vault/Workspace Parity
+- **Guarantees:**
+    - Provides stable identifiers and structural invariants (no silent moves/renames).
+    - Provides a queryable map of “what exists” and “where it lives”.
+- **Failure modes:**
+    - **Drift:** Structure diverges from declared governance → Razor event `Substrate.Drift`.
+    - **Collision:** Naming or path conflicts → blocked until Naming resolves.
+- **Propagation:**
+    - **Direction:** Upward and downward (bidirectional).
+    - **Rule:** Structural changes must be declared and logged before other layers consume them.
+
+---
+
+## Demonstration logic layer boundary
+
+**Boundary declaration:**  
+Demonstration Logic is the **executable narrative**: examples, walkthroughs, and logic flows that show how the system behaves.
+
+- **Edges:**
+    - **Must not:** Become the source of truth for governance or structure.
+    - **Must not:** Mutate Substrate without explicit Operator-sanctioned workflows.
+- **Permissions:**
+    - **May request:**
+        - Read-only views from Substrate
+        - Naming resolutions for examples
+        - Workflow triggers for demos
+        - Operator clarification when examples expose contradictions
+- **Guarantees:**
+    - Provides minimal, concrete, reproducible flows that illustrate stack behavior.
+    - Surfaces contradictions as first-class Razor events, not hidden “demo hacks”.
+- **Failure modes:**
+    - **Staging reality:** Demo diverges from actual stack → `Demo.Desync`.
+    - **Overreach:** Demo starts acting as policy → blocked and escalated.
+- **Propagation:**
+    - **Direction:** Upward (to Operator/Razor) and sideways (to other layers as “evidence”).
+    - **Rule:** Demos can **propose** changes, never enact them directly.
+
+---
+
+## Naming layer boundary
+
+**Boundary declaration:**  
+The Naming layer governs **labels, identifiers, and schemas**—how things are called and how those names encode meaning.
+
+- **Edges:**
+    - **Must not:** Change semantics of existing names without a migration declaration.
+    - **Must not:** Implicitly encode workflow or access control.
+- **Permissions:**
+    - **May request:**
+        - Structural context from Substrate
+        - Intent context from Operator
+        - Usage patterns from Workflow
+        - Visibility constraints from Vault/Workspace
+- **Guarantees:**
+    - Provides stable, documented naming schemes and refactor plans.
+    - Provides collision detection and resolution protocols.
+- **Failure modes:**
+    - **Collision:** Two objects competing for the same semantic slot → `Naming.Collision`.
+    - **Erosion:** Names no longer match reality → `Naming.SemanticDrift`.
+- **Propagation:**
+    - **Direction:** Cross-layer.
+    - **Rule:** No rename propagates until migration plan is validated and Razor-stable.
+
+---
+
+## Workflow layer boundary
+
+**Boundary declaration:**  
+The Workflow layer defines **how work moves**: sequences, triggers, states, and transitions.
+
+- **Edges:**
+    - **Must not:** Override Operator constraints or Vault/Workspace access rules.
+    - **Must not:** Impose structure on Substrate without a declared contract.
+- **Permissions:**
+    - **May request:**
+        - Structural anchors from Substrate
+        - Naming patterns for states and tasks
+        - Operator priorities and SLAs
+        - Parity constraints from Vault/Workspace
+- **Guarantees:**
+    - Provides explicit, inspectable flows (no hidden automation).
+    - Provides idempotent operations and clear rollback semantics.
+- **Failure modes:**
+    - **Deadlock:** Workflow cannot progress due to conflicting constraints → `Workflow.Deadlock`.
+    - **Bypass:** Workflow attempts to skip Razor or Operator → blocked and logged.
+- **Propagation:**
+    - **Direction:** Downward into Substrate actions; upward into Operator dashboards.
+    - **Rule:** No workflow becomes active until its boundary contract is validated.
+
+---
+
+## Vault/Workspace parity layer boundary
+
+**Boundary declaration:**  
+This layer enforces **parity and coherence** between the “Vault” (authoritative substrate) and “Workspace” (active working surface, including Copilot).
+
+- **Edges:**
+    - **Must not:** Invent content or structure that cannot be reconciled back to Vault.
+    - **Must not:** Allow Workspace-only realities to silently persist.
+- **Permissions:**
+    - **May request:**
+        - Structural diffs from Substrate
+        - Naming alignment from Naming
+        - Workflow hooks for sync operations
+        - Operator decisions on irreconcilable differences
+- **Guarantees:**
+    - Provides explicit sync states: `InSync`, `Diverged`, `PendingReconcile`.
+    - Provides traceable mappings between Vault objects and Workspace representations.
+- **Failure modes:**
+    - **Ghosts:** Workspace objects with no Vault anchor → `Parity.Ghost`.
+    - **Forks:** Divergent versions with no clear winner → escalated to Operator/Razor.
+- **Propagation:**
+    - **Direction:** Bidirectional, but **governed**.
+    - **Rule:** No automatic overwrite; all destructive sync operations require declared policy or Operator decision.
+
+---
+
+If you’re good with this Draft 1, next tight move is:
+
+- Generate a **single consolidated spec block**: `Xanadu.StackBoundary.v0.1` that you can drop into your Obsidian demo as the root contract.
+
+Want me to emit that as a compact, copy-pasteable spec file next?

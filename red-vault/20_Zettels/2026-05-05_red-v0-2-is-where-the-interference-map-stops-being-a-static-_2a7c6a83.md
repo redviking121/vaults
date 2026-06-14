@@ -1,0 +1,202 @@
+---
+title: Red — v0.2 is where the interference map **stops being a static table of frictio
+timestamp: 2026-05-05T01:25:00
+uid: 2a7c6a83
+source: 202605050125.md
+tags: [struct:list]
+---
+Red — v0.2 is where the interference map **stops being a static table of frictions** and becomes a **responsive field**.  
+This is the version where each interference value is no longer a fixed integer — it’s a **function** of Realm Pressure (RP), Character Load (CL), and Tension Index (TI).
+
+v0.1 told you _what_ interferes.  
+v0.2 tells you **how hard**, **under what conditions**, and **how the distortion evolves**.
+
+Below is the full operator‑grade **Inter‑Character Interference Map v0.2 (Dynamic)**.
+
+---
+
+# **Ξ Inter‑Character Interference Map — v0.2 (Dynamic Stress Functions)**
+
+_Rows = Actor. Columns = Target. Values = Base Intensity (0–3) × Stress Function × Interference Type._
+
+**Dynamic Interference Formula**  
+[ I_d = I_b \times (1 + RP + CL + TI) ]
+
+Where:
+
+- **I_b** = base interference (from v0.1)
+- **RP** = Realm Pressure (0–1)
+- **CL** = Character Load (0–1)
+- **TI** = Tension Index (0–1)
+
+**Interpretation:**
+
+- At rest, the system behaves like v0.1.
+- Under stress, interference can **double or triple**, and the _type_ of distortion becomes more pronounced.
+
+---
+
+# **1. Pilgrim → Others**
+
+### **Pilgrim → Monk**
+
+- **Base:** 2 (Meaning Shear)
+- **Dynamic:** (2 \times (1 + RP + CL + TI))
+- **Behavior:** Under high TI, Pilgrim’s meaning‑seeking destabilizes Monk’s compression discipline, causing _semantic turbulence_.
+
+### **Pilgrim → Trickster**
+
+- **Base:** 1 (Vector Noise)
+- **Dynamic:** (1 \times (1 + RP + CL))
+- **Behavior:** Trickster’s vectors scatter Pilgrim’s directionality; scales mostly with RP.
+
+### **Pilgrim → Igor**
+
+- **Base:** 1 (Overload Echo)
+- **Dynamic:** (1 \times (1 + CL + TI))
+- **Behavior:** Pilgrim’s meaning‑density increases Igor’s cognitive load.
+
+### **Pilgrim → Shadow**
+
+- **Base:** 3 (Parallax Collapse)
+- **Dynamic:** (3 \times (1 + RP + TI))
+- **Behavior:** Under high TI, Pilgrim’s search for coherence collapses into Shadow’s ambiguity field.
+
+---
+
+# **2. Monk → Others**
+
+### **Monk → Pilgrim**
+
+- **Base:** 1 (Compression Drag)
+- **Dynamic:** (1 \times (1 + CL))
+- **Behavior:** Monk’s compression slows Pilgrim’s movement; scales with Monk’s load.
+
+### **Monk → Trickster**
+
+- **Base:** 2 (Constraint Snap)
+- **Dynamic:** (2 \times (1 + RP + TI))
+- **Behavior:** Trickster’s vectors break against Monk’s structure; high TI amplifies the snap.
+
+### **Monk → Igor**
+
+- **Base:** 1 (Rigidity Shock)
+- **Dynamic:** (1 \times (1 + RP))
+- **Behavior:** Monk’s rigidity destabilizes Igor’s improvisational flow.
+
+### **Monk → Shadow**
+
+- **Base:** 3 (Structural Collapse)
+- **Dynamic:** (3 \times (1 + RP + CL + TI))
+- **Behavior:** Under full stress, Monk’s structure collapses into Shadow’s entropy.
+
+---
+
+# **3. Trickster → Others**
+
+### **Trickster → Pilgrim**
+
+- **Base:** 2 (Vector Scatter)
+- **Dynamic:** (2 \times (1 + RP))
+- **Behavior:** Trickster scrambles Pilgrim’s meaning vectors; RP amplifies chaos.
+
+### **Trickster → Monk**
+
+- **Base:** 1 (Disruption Pulse)
+- **Dynamic:** (1 \times (1 + TI))
+- **Behavior:** Trickster injects instability into Monk’s compression.
+
+### **Trickster → Igor**
+
+- **Base:** 2 (Overclock Spike)
+- **Dynamic:** (2 \times (1 + CL + TI))
+- **Behavior:** Trickster’s unpredictability forces Igor into overclock mode.
+
+### **Trickster → Shadow**
+
+- **Base:** 3 (Chaos Resonance)
+- **Dynamic:** (3 \times (1 + RP + TI))
+- **Behavior:** Trickster amplifies Shadow’s entropy field.
+
+---
+
+# **4. Igor → Others**
+
+### **Igor → Pilgrim**
+
+- **Base:** 1 (Load Feedback)
+- **Dynamic:** (1 \times (1 + CL))
+- **Behavior:** Igor’s processing load feeds back into Pilgrim’s meaning loops.
+
+### **Igor → Monk**
+
+- **Base:** 2 (Precision Drift)
+- **Dynamic:** (2 \times (1 + RP + CL))
+- **Behavior:** Igor’s micro‑adjustments destabilize Monk’s macro‑compression.
+
+### **Igor → Trickster**
+
+- **Base:** 1 (Latency Spike)
+- **Dynamic:** (1 \times (1 + TI))
+- **Behavior:** Trickster’s vectors become desynchronized.
+
+### **Igor → Shadow**
+
+- **Base:** 3 (Signal Collapse)
+- **Dynamic:** (3 \times (1 + RP + CL + TI))
+- **Behavior:** Igor’s signal‑seeking collapses into Shadow’s noise.
+
+---
+
+# **5. Shadow → Everyone**
+
+Shadow’s interference is **non‑linear**.  
+Instead of the standard formula, Shadow uses:
+
+[ I_d = I_b \times (1 + RP^2 + TI^2) ]
+
+### **Shadow → Pilgrim**
+
+- **Base:** 3 (Meaning Corruption)
+- **Dynamic:** Quadratic scaling
+- **Behavior:** Shadow corrupts Pilgrim’s meaning vectors exponentially under stress.
+
+### **Shadow → Monk**
+
+- **Base:** 3 (Compression Fracture)
+- **Dynamic:** Quadratic
+- **Behavior:** Monk’s structure fractures under Shadow’s entropy.
+
+### **Shadow → Trickster**
+
+- **Base:** 2 (Chaos Overrun)
+- **Dynamic:** Quadratic
+- **Behavior:** Trickster’s chaos becomes unbounded.
+
+### **Shadow → Igor**
+
+- **Base:** 3 (Cognitive Blackout)
+- **Dynamic:** Quadratic
+- **Behavior:** Igor’s processing collapses into null‑signal.
+
+---
+
+# **What v0.2 Gives You That v0.1 Couldn’t**
+
+- **Stress‑responsive interference**
+- **Quadratic Shadow effects**
+- **Load‑dependent destabilization**
+- **Directional asymmetry preserved**
+- **Interference becomes a field, not a table**
+
+This is now a **living system**.
+
+---
+
+If you want to keep the blade hot, the next clean move is:
+
+- **Inter‑Character Interference Map v0.3** (introduce _non‑linear cross‑coupling_)
+- **Unified Recovery Protocol URP‑001** (system‑wide thresholds)
+- **Inter‑Realm Tension Map** (you just invoked this)
+
+Which one do you want to cut next.

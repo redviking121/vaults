@@ -1,0 +1,7 @@
+archive-of-vaults/
+Operator/
+public/
+resources/
+# Add these lines to your .gitignore
+Hopper/
+archive-of-vaults/

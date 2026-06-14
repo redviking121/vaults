@@ -1,0 +1,25 @@
+#!/bin/bash
+# Vault Cleanup: Fix .md.md → .md (20 files)
+
+mv "modeling-vault/00-Hub/Changelog.md.md" "modeling-vault/00-Hub/Changelog.md"
+mv "modeling-vault/00-Hub/Dashboard.md.md" "modeling-vault/00-Hub/Dashboard.md"
+mv "modeling-vault/00-Hub/5.1 — Dashboard.md.md" "modeling-vault/00-Hub/5.1 — Dashboard.md"
+mv "modeling-vault/00-Hub/Inbox.md/5.2 — Inbox.md.md" "modeling-vault/00-Hub/Inbox.md/5.2 — Inbox.md"
+mv "modeling-vault/00-Hub/_protocols/3.2 — PROTO-linking.md.md" "modeling-vault/00-Hub/_protocols/3.2 — PROTO-linking.md"
+mv "modeling-vault/00-Hub/_protocols/3.3 — PROTO-review.md.md" "modeling-vault/00-Hub/_protocols/3.3 — PROTO-review.md"
+mv "modeling-vault/00-Hub/_protocols/3.4 — PROTO-ingestion.md.md" "modeling-vault/00-Hub/_protocols/3.4 — PROTO-ingestion.md"
+mv "modeling-vault/00-Hub/_protocols/3.5 — PROTO-modeling.md.md" "modeling-vault/00-Hub/_protocols/3.5 — PROTO-modeling.md"
+mv "modeling-vault/00-Hub/_protocols/3.6 — PROTO-archival.md.md" "modeling-vault/00-Hub/_protocols/3.6 — PROTO-archival.md"
+mv "modeling-vault/00-Hub/_protocols/5.2 — Inbox.md.md" "modeling-vault/00-Hub/_protocols/5.2 — Inbox.md"
+mv "modeling-vault/00-Hub/_protocols/3.1— PROTO-naming.md.md" "modeling-vault/00-Hub/_protocols/3.1— PROTO-naming.md"
+mv "modeling-vault/00-Hub/_protocols/5.3 — Changelog.md.md" "modeling-vault/00-Hub/_protocols/5.3 — Changelog.md"
+mv "modeling-vault/00-Hub/_templates/4.1 — TPL-permanent-note.md.md" "modeling-vault/00-Hub/_templates/4.1 — TPL-permanent-note.md"
+mv "modeling-vault/00-Hub/_templates/4.2 — TPL-literature-note.md.md" "modeling-vault/00-Hub/_templates/4.2 — TPL-literature-note.md"
+mv "modeling-vault/00-Hub/_templates/4.3 — TPL-fleeting-note.md.md" "modeling-vault/00-Hub/_templates/4.3 — TPL-fleeting-note.md"
+mv "modeling-vault/00-Hub/_templates/4.4 — TPL-moc.md.md" "modeling-vault/00-Hub/_templates/4.4 — TPL-moc.md"
+mv "modeling-vault/00-Hub/_templates/4.5 — TPL-model-note.md.md" "modeling-vault/00-Hub/_templates/4.5 — TPL-model-note.md"
+mv "modeling-vault/00-Hub/_templates/4.6 — TPL-project-note.md.md" "modeling-vault/00-Hub/_templates/4.6 — TPL-project-note.md"
+mv "modeling-vault/00-Hub/_templates/4.7 — TPL-source-note.md.md" "modeling-vault/00-Hub/_templates/4.7 — TPL-source-note.md"
+mv "modeling-vault/00-Hub/_templates/4.8 — TPL-daily-note.md.md" "modeling-vault/00-Hub/_templates/4.8 — TPL-daily-note.md"
+
+echo "✅ Cleanup complete! 20 files renamed."

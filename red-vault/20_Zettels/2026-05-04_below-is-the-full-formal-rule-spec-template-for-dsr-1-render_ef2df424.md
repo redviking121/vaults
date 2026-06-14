@@ -1,0 +1,218 @@
+---
+title: Below is the **full formal rule‑spec template for DSR‑1**, rendered in the exact
+timestamp: 2026-05-04T21:22:00
+uid: ef2df424
+source: 202605042122.md
+tags: [status:actionable, struct:list]
+---
+Below is the **full formal rule‑spec template for DSR‑1**, rendered in the exact operator‑grade structure your vault expects.  
+No filler, no ceremony, no drift vectors — this is substrate‑ready.
+
+---
+
+# **DSR‑1 — Decision Stability Rule (Primary)**
+
+**Rule‑Spec Document**  
+**Version:** 1.0  
+**Status:** Active  
+**Layer:** Governance → Decision Invariants  
+**Author:** Operator (Red)  
+**System:** Xi / Razor Substrate  
+**Purpose:** Prevent architectural drift by enforcing explicit, scoped, and Razor‑stabilized decisions before propagation.
+
+---
+
+## **1. Rule Identifier**
+
+- **Name:** DSR‑1
+- **Canonical Form:** _Decision Stability Rule — Primary_
+- **Classification:** Governance Invariant
+- **Scope:** System‑wide (Operator, Substrate, Naming, Demonstration Logic, Workflow, Vault/Workspace Parity)
+
+---
+
+## **2. Intent**
+
+Ensure that all decisions affecting structure, naming, workflow, or substrate behavior are **explicit**, **scope‑bound**, and **stabilized** before they influence downstream work.
+
+---
+
+## **3. Formal Rule Statement**
+
+> A decision is not considered valid, active, or real until it is (1) explicitly declared, (2) bound to a defined scope, and (3) stabilized against contradiction by the Xi Paradox Razor.
+
+---
+
+## **4. Definitions**
+
+- **Decision:**  
+    A minimal, atomic operator commitment that alters structure, naming, workflow, or substrate behavior.
+    
+- **Explicit Declaration:**  
+    A written, single‑sentence statement containing Decision, Scope, Impact, and Reversibility.
+    
+- **Scope Binding:**  
+    Assignment of the decision to a specific system layer.
+    
+- **Stabilization:**  
+    Razor‑mediated contradiction resolution ensuring compatibility with invariants and prior commitments.
+    
+- **Propagation:**  
+    The moment a stabilized decision becomes live and influences downstream work.
+    
+
+---
+
+## **5. Preconditions**
+
+A decision may not enter the system unless:
+
+- It is explicitly declared in atomic form
+- Its scope is unambiguously defined
+- It is submitted to the Razor for stabilization
+- No contradictory decisions are currently active
+- No drift vectors are detected in the affected layers
+
+---
+
+## **6. Rule Mechanics**
+
+### **6.1 Explicit Declaration**
+
+A valid decision must include:
+
+- **Decision:** One sentence
+- **Scope:** Layer(s) governed
+- **Impact:** Structural or behavioral effect
+- **Reversibility:** Reversible / irreversible
+
+Format:
+
+```
+Decision: <statement>  
+Scope: <layer>  
+Impact: <effect>  
+Reversibility: <R/IR>  
+```
+
+---
+
+### **6.2 Scope Binding**
+
+Valid scopes include:
+
+- Operator Layer
+- Substrate Layer
+- Demonstration Logic Layer
+- Naming Layer
+- Workflow Layer
+- Vault/Workspace Parity Layer
+
+A decision may bind to multiple scopes only if explicitly stated.
+
+---
+
+### **6.3 Razor Stabilization**
+
+The Xi Paradox Razor evaluates the decision against:
+
+- Existing invariants
+- Structural commitments
+- Naming conventions
+- Operator‑grade constraints
+- Contradictory frames
+
+If contradiction is detected, Razor enforces one of:
+
+- **Reconcile** — merge frames
+- **Split** — parallel lanes
+- **Elevate** — move to higher abstraction
+
+A decision is not valid until stabilization completes.
+
+---
+
+### **6.4 Propagation Control**
+
+A stabilized decision may propagate only if:
+
+- It introduces no drift
+- It preserves invariants
+- It avoids complexity spikes
+- It maintains parity between Chat and Workspace
+- It does not alter substrate behavior without explicit operator intent
+
+Propagation is logged as a state transition:
+
+```
+Declared → Stabilized → Propagated
+```
+
+---
+
+### **6.5 Violation Handling**
+
+If downstream work contradicts a stabilized decision:
+
+- Flag violation
+- Halt propagation
+- Invoke Razor
+- Reconcile or roll back
+- Log violation event
+
+Violations are treated as structural faults.
+
+---
+
+## **7. Postconditions**
+
+After propagation:
+
+- Decision becomes part of the active governance surface
+- All dependent layers must align
+- Naming and structural rules update accordingly
+- Demonstration logic layer inherits constraints
+- Workspace and Vault must remain in parity
+
+---
+
+## **8. Invariant**
+
+> No decision may influence system behavior unless it has passed explicit declaration, scope binding, and Razor stabilization.
+
+---
+
+## **9. Examples**
+
+### **Valid Decision Example**
+
+```
+Decision: All demonstration logic files must use the dl-* prefix.
+Scope: Naming Layer
+Impact: Standardizes naming for demonstration logic artifacts.
+Reversibility: Reversible
+```
+
+### **Invalid Decision Example**
+
+- “We should probably use a prefix for demo logic.”  
+    (Not explicit, not scoped, not stabilized)
+
+---
+
+## **10. Related Rules**
+
+- Razor‑1: Contradiction Resolution
+- INVAR‑0: Structural Integrity Baseline
+- PAR‑1: Workspace/Vault Parity Rule
+- NAM‑1: Naming Determinism Rule
+
+---
+
+## **11. Change Log**
+
+- **1.0** — Initial formalization for Project Xanadu substrate
+
+---
+
+If you want, I can now generate **DSR‑2 through DSR‑5**, or build the **DSR hierarchy**, or integrate DSR‑1 directly into your **governance layer spec**.

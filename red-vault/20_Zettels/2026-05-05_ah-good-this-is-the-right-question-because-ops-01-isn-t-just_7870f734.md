@@ -1,0 +1,221 @@
+---
+title: Ah, good—this is the right question, because **Ops‑01 isn’t just doctrine**, it’
+timestamp: 2026-05-05T03:52:00
+uid: 7870f734
+source: 202605050352.md
+tags: [struct:question, status:actionable, struct:future, struct:list, struct:timestamp]
+---
+Ah, good—this is the right question, because **Ops‑01 isn’t just doctrine**, it’s something you _run_ inside Open‑WebUI as part of your daily operational surface.
+
+Below is the **operator‑grade answer**: how Baseline Operator Posture becomes a _living workflow_ inside Open‑WebUI, not just a document you read.
+
+---
+
+# **How Ops‑01 Runs Inside Open‑WebUI**
+
+Think of Open‑WebUI as a **console**.  
+Ops‑01 defines how you _enter_, _operate_, and _exit_ that console.
+
+There are **four layers** to making this real:
+
+1. **Session Rituals** (On‑Console / Off‑Console)
+2. **Prompt Macros** (pre‑loaded posture commands)
+3. **Conversation Thread Discipline** (one thread = one objective)
+4. **Logging + Vault Integration** (Ops‑01’s “One move, one mark”)
+
+Let’s break each down.
+
+---
+
+## **1. Session Rituals inside Open‑WebUI**
+
+### **On‑Console Ritual (Start of Session)**
+
+You open a new chat and immediately run a macro like:
+
+> **“ON CONSOLE — Objective: <X>. Posture: CALM. Constraints: <Y>. Begin session.”**
+
+This does three things:
+
+- Declares the **objective**
+- Declares the **posture**
+- Establishes the **operational frame** for the AI
+
+Open‑WebUI treats this like a _system prompt for the session_, so the entire conversation stays aligned.
+
+### **Off‑Console Ritual (End of Session)**
+
+At the end, you close with:
+
+> **“OFF CONSOLE — Summary: <3–5 bullets>. Handoff: <next step>. Exit.”**
+
+This creates a clean, timestamped boundary in the thread.
+
+---
+
+## **2. Prompt Macros (Your Real Power Move)**
+
+Open‑WebUI allows **custom prompts** or **preset instructions**.
+
+You create macros like:
+
+### **Macro: “Start Ops‑01 Session”**
+
+```
+You are entering an operational block.
+Anchor time.
+Ask me for:
+1. Objective (one line)
+2. Constraints
+3. Posture tag (CALM / ALERT / GUARDED)
+Then confirm readiness and begin logging.
+```
+
+### **Macro: “Drift Check”**
+
+```
+Pause all output.
+Ask me:
+- What is my objective?
+- What am I doing right now?
+- Are they aligned?
+Then classify my state: ALIGNED / DRIFT / OVERLOAD.
+```
+
+### **Macro: “One Move, One Mark”**
+
+```
+After each action I describe, ask:
+“What was the result? Log it.”
+```
+
+These macros turn Ops‑01 from doctrine into **behavioral automation**.
+
+---
+
+## **3. Conversation Thread Discipline**
+
+Open‑WebUI supports **multiple persistent threads**.
+
+Ops‑01 uses this as follows:
+
+- **One thread = one operational block**  
+    (e.g., “Open‑WebUI rebuild”, “Xanadu doctrine drafting”, “Ops‑Vault sync fix”)
+    
+- **No mixing objectives**  
+    If the objective changes, you start a new thread.
+    
+- **Thread titles follow Ops‑01 format:**  
+    `2026‑05‑03 — Ops‑01 — <Objective>`
+    
+
+This gives you:
+
+- Clean timelines
+- Reconstructable logs
+- Zero context bleed
+- Perfect handoff to future‑you
+
+---
+
+## **4. Logging + Vault Integration**
+
+This is where your world gets tight.
+
+### **Inside Open‑WebUI**
+
+You log actions inline:
+
+```
+[12:41] ACTION — Rebuilt venv
+[12:42] RESULT — Dependencies resolved, no errors
+[12:43] NEXT — Build frontend
+```
+
+### **Outside (Ops‑Vault)**
+
+You export or copy the session transcript into:
+
+`/Ops-Vault/Logs/2026/05/2026-05-03-ops01-openwebui-rebuild.md`
+
+Inside that file:
+
+- Session header
+- Objective
+- Posture
+- Timeline
+- Summary
+- Handoff
+
+This gives you a **single source of truth** for all operational activity.
+
+---
+
+# **Putting It All Together: A Real Example**
+
+You open Open‑WebUI and type:
+
+> **Start Ops‑01 Session.**
+
+The macro fires:
+
+- Asks for objective
+- Asks for constraints
+- Asks for posture
+- Confirms readiness
+- Begins logging
+
+You respond:
+
+```
+Objective: Diagnose missing conversation history.
+Constraints: No rebuild unless necessary.
+Posture: CALM.
+```
+
+The AI replies:
+
+```
+Acknowledged.
+Session start: 12:49.
+Primary objective locked.
+Environment constraints noted.
+Posture: CALM.
+Ready for first action.
+```
+
+You proceed with:
+
+```
+ACTION — Inspect directory structure.
+```
+
+AI logs:
+
+```
+[12:50] ACTION — Inspect directory structure.
+What did you observe? Log the result.
+```
+
+You continue until done.
+
+Then you close with:
+
+```
+OFF CONSOLE — Summary + Handoff.
+```
+
+AI formats the summary and closes the session.
+
+This is **Ops‑01 running live**.
+
+---
+
+# **If you want, I can now:**
+
+- Build the **exact macros** you should install in Open‑WebUI
+- Create a **standard session template** for your threads
+- Design the **Ops‑Vault log format** that pairs with Open‑WebUI
+- Or build **Ops‑02** next (Incident Intake & Triage)
+
+Which direction do you want to take this operational surface next, Red.

@@ -1,0 +1,48 @@
+---
+title: No worries — you didn’t “blow the syntax,” Bash just gets picky when parentheses
+timestamp: 2026-05-05T00:01:00
+uid: 4208045a
+source: 202605050001.md
+tags: [struct:list]
+---
+No worries — you didn’t “blow the syntax,” Bash just gets picky when parentheses or substitutions aren’t closed exactly right. Let’s get you back on rails with the cleanest, least‑fragile version of the command.
+
+Here’s the **exact** command you want, and why it works:
+
+```
+ps -p $(pidof obsidian | head -n 1) -o cmd
+```
+
+### ✔️ What each part does
+
+- `pidof obsidian` → prints all Obsidian PIDs
+- `head -n 1` → selects the **lowest PID**, which is always the **main process**
+- `$( ... )` → command substitution, feeding that PID into `ps`
+- `ps -p <PID> -o cmd` → prints the command used to launch that process
+
+If you mistyped even one parenthesis or `$(`, Bash will complain.
+
+### ✔️ If you want the _bulletproof_ version
+
+This avoids pipes and is harder to mistype:
+
+```
+MAINPID=$(pidof obsidian | awk '{print $1}')
+ps -p "$MAINPID" -o cmd
+```
+
+Two steps, zero ambiguity.
+
+### ✔️ Or the “show me everything” version
+
+If you want to see the command lines for _all_ Obsidian processes:
+
+```
+ps -p $(pidof obsidian) -o pid,cmd
+```
+
+This is useful for spotting which one is the renderer, GPU process, etc.
+
+---
+
+If you run the first command again and paste the output, I’ll tell you instantly whether GNOME is now launching your wrapper or still launching the system binary.

@@ -1,0 +1,16 @@
+{
+  "app:open-settings": [
+    {
+      "modifiers": ["Ctrl"],
+      "key": ","
+    }
+  ],
+  "app:open-command-palette": [
+    {
+      "modifiers": ["Ctrl"],
+      "key": "P"
+    }
+  ]
+}
+muahhh
+
