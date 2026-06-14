@@ -1,0 +1,68 @@
+---
+title: Absolutely — you can rename those directories to remove spaces, and it’s **100%
+timestamp: 2026-05-04T20:24:00
+uid: 26238f14
+source: 202605042024.md
+tags: [struct:list]
+---
+Absolutely — you can rename those directories to remove spaces, and it’s **100% safe** as long as you treat the vault root as a single atomic unit.
+
+Here’s the operator‑grade version:
+
+---
+
+## ✔ Yes, you can rename the directories (spaces → hyphens/underscores)
+
+Linux doesn’t care.  
+Obsidian doesn’t care.  
+Your plugins don’t care.  
+Relative links don’t care.
+
+The only thing that matters is:
+
+**Do not rename or separate the `.obsidian/` folder from the rest of the vault.**
+
+As long as the vault root stays intact, the name of the folder is irrelevant.
+
+---
+
+## ✔ Safe rename procedure (no drift, no breakage)
+
+### 1. Close Obsidian
+
+Just avoids workspace writes mid‑rename.
+
+### 2. Rename the folder in place
+
+Example:
+
+```
+mv "Ops Vault" ops-vault
+```
+
+or
+
+```
+mv "Ops Vault" ops_vault
+```
+
+or whatever naming scheme matches your substrate.
+
+### 3. Reopen Obsidian and point it at the new folder name
+
+Obsidian will treat it as the same vault because the `.obsidian` directory didn’t move.
+
+---
+
+## ✔ Why this is safe
+
+- Obsidian stores **absolute paths only in the vault list**, not inside the vault.
+- All internal links are **relative**.
+- Plugins reference paths **relative to the vault root**.
+- Renaming the folder does not change the vault’s identity.
+
+This is one of the few operations that is genuinely low‑risk.
+
+---
+
+## If you want, tell me the exact before/after names and I’ll give you the precise `mv` commands so you don’t even have to think about it.

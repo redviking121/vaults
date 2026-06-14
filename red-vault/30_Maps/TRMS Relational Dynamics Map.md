@@ -1,0 +1,25 @@
+# TRMS Relational Dynamics Map
+Tags:: #map #trms #relational-dynamics
+
+## Purpose
+Top-level map for the **Triadic Relational Feedback Model (TRMS)**. This map governs the analysis of relational tensions, feedback loops, and structural coherence within multi-agent and multi-frame environments.
+
+## Core Nodes
+- [[TRM Temporal Inertia Scale]]
+- [[TRM Temporal Layer]]
+- [[Temporal Anchoring]]
+- [[Temporal Drift]]
+- [[Temporal Reinforcement]]
+- [[Temporal Pruning]]
+
+## Structural Nodes
+- [[Contradiction Resolution]]
+- [[Propagation Coherence]]
+- [[Decision Stability]]
+
+## Operator Nodes
+- [[Vessel Protocol]]
+- [[Razor Governance Map]]
+
+## Notes
+Every TRMS-related Zettel should link here. This map serves as the governance spine for relational dynamics.

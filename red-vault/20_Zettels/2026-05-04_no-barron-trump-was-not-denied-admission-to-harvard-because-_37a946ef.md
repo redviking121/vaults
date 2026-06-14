@@ -1,0 +1,12 @@
+---
+title: No, Barron Trump was not denied admission to Harvard—because he never applied in
+timestamp: 2026-05-04T17:52:00
+uid: 37a946ef
+source: 202605041752.md
+tags: [struct:question, status:actionable]
+---
+No, Barron Trump was not denied admission to Harvard—because he never applied in the first place. First Lady Melania Trump has publicly stated that any claims suggesting he applied or was rejected are **completely false** [Business Standard](https://www.business-standard.com/world-news/did-harvard-reject-barron-trump-here-s-what-first-lady-melania-trump-said-125052801327_1.html) [USA TODAY](https://www.usatoday.com/story/news/2025/05/27/barron-trump-donald-trump-melania-trump-harvard-rejection/83874163007/) [Newsweek | MSN](https://www.msn.com/en-us/news/politics/melania-trump-shoots-down-rumor-barron-applied-to-harvard/ar-AA1FARGB). Instead, Barron Trump enrolled at **New York University's Stern School of Business** in September 2024 and has since completed his freshman year [Business Standard](https://www.business-standard.com/world-news/did-harvard-reject-barron-trump-here-s-what-first-lady-melania-trump-said-125052801327_1.html) [USA TODAY](https://www.usatoday.com/story/news/2025/05/27/barron-trump-donald-trump-melania-trump-harvard-rejection/83874163007/).
+
+The speculation surrounding his alleged rejection emerged amid **ongoing tensions** between the Trump administration and Ivy League universities, particularly Harvard [Business Standard](https://www.business-standard.com/world-news/did-harvard-reject-barron-trump-here-s-what-first-lady-melania-trump-said-125052801327_1.html) [USA TODAY](https://www.usatoday.com/story/news/2025/05/27/barron-trump-donald-trump-melania-trump-harvard-rejection/83874163007/). The administration has accused these institutions of fostering antisemitism and has taken **punitive measures**, including withholding federal funding and attempting to block international student enrollment [Business Standard](https://www.business-standard.com/world-news/did-harvard-reject-barron-trump-here-s-what-first-lady-melania-trump-said-125052801327_1.html) [USA TODAY](https://www.usatoday.com/story/news/2025/05/27/barron-trump-donald-trump-melania-trump-harvard-rejection/83874163007/). However, these actions are unrelated to Barron Trump's college decisions.
+
+So, while the rumor gained traction online, it turns out to be just that—a rumor. Want to dive deeper into the Trump-Harvard feud, or should we switch gears?

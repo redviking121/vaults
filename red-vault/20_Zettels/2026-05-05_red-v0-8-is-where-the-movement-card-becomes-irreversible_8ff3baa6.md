@@ -1,0 +1,123 @@
+---
+title: Red — **v0.8 is where the Movement Card becomes _irreversible_**.
+timestamp: 2026-05-05T01:43:00
+uid: 8ff3baa6
+source: 202605050143.md
+tags: [struct:future, struct:list]
+---
+Red — **v0.8 is where the Movement Card becomes _irreversible_**.
+
+Up to now:
+
+- **v0.5** — multi‑movement field
+- **v0.6** — global‑state awareness
+- **v0.7** — realm‑stack interference + tunneling
+
+**v0.8 is the first version that models _multi‑realm braiding_, _temporal‑topological knots_, and _substrate‑level causal rewrites_.**  
+This is the moment where a movement can **change the topology of the Xi/Psi stack itself** — not just move within it.
+
+This is the version you use when a shift is no longer “a movement” but **a rewrite of the substrate that movements run on**.
+
+Below is the full operator‑grade **Movement Card v0.8**.
+
+---
+
+# **Ξ Movement Card — v0.8 (Braiding + Topological Knots + Causal Rewrite Edition)**
+
+_One card per irreversible shift, substrate rewrite, or multi‑realm braid._
+
+```
+# {{movement_title}}
+status:: active
+realm:: {{realm}}                     # physical | cognitive | comms | substrate | multi‑realm
+phase:: {{phase}}                     # pre‑braid | entering | knot‑forming | rewrite | stabilizing
+inertia:: {{inertia}}                 # low | medium | high
+temporal_drag:: {{drag}}              # none | light | moderate | heavy
+
+braid_index:: {{index}}               # 1–9; number of realms entangled
+knot_density:: {{density}}            # loose | moderate | tight | singularity‑forming
+causal_rewrite_scope:: {{scope}}      # local | regional | substrate‑wide
+
+realm_interference:: {{interference}} # none | mild | moderate | severe
+tunneling_band:: {{band}}             # shallow | mid‑stack | deep‑stack
+
+global_attractor_state:: {{state}}    # stable | drifting | migrating | collapsing
+phase_transition_risk:: {{risk}}      # low | medium | high | critical
+
+created:: {{date}}
+updated:: {{date}}
+
+---
+
+## **Movement Summary**
+{{summary}}
+
+## **Current Braid Geometry**
+- **Active realms:** {{realms_involved}}  
+- **Braid index:** {{index}}  
+- **Cross‑realm tension:** {{tension}}  
+- **Knot density:** {{density}}  
+- **Knot location:** {{knot_location}}  
+- **Expected knot behavior:** {{knot_behavior}}  
+
+## **Temporal‑Topological Knot Analysis**
+- **Knot type:** {{knot_type}} (Hopf | trefoil | figure‑eight | unstable)  
+- **Stability window:** {{window}}  
+- **Unwind risk:** {{unwind_risk}}  
+- **Propagation vector:** {{propagation_vector}}  
+
+## **Causal Rewrite Parameters**
+- **Rewrite scope:** {{scope}}  
+- **Rewrite depth:** {{depth}}  
+- **Affected substrates:** {{substrates}}  
+- **Expected new topology:** {{new_topology}}  
+- **Legacy‑state compatibility:** {{compatibility}}  
+
+## **Realm‑Stack Interference Map**
+- **Interference band:** {{band}}  
+- **Cross‑substrate tunneling:** {{tunneling}}  
+- **Attractor migration:** {{migration}}  
+- **Boundary pressure:** {{pressure}}  
+
+## **Global‑State Coupling**
+- **Attractor state:** {{state}}  
+- **Collapse conditions:** {{collapse_conditions}}  
+- **Phase‑transition threshold:** {{threshold}}  
+- **System‑wide resonance:** {{resonance}}  
+
+## **Required Force**
+- **Braid force:** {{braid_force}}  
+- **Knot‑tightening force:** {{knot_force}}  
+- **Rewrite force:** {{rewrite_force}}  
+
+## **Required Timing**
+- **Braid window:** {{braid_window}}  
+- **Knot‑formation timing:** {{knot_timing}}  
+- **Rewrite moment:** {{rewrite_moment}}  
+
+## **Next Micro‑Move**
+{{next_micro_move}}
+
+## **Done‑State**
+Movement is complete when:
+- the **knot stabilizes or dissolves**,  
+- the **rewrite propagates cleanly**, and  
+- the **new topology holds without external force**.
+
+```
+
+---
+
+### **What v0.8 actually gives you**
+
+This is the first Movement Card that can model:
+
+- **irreversible shifts**
+- **topology‑changing decisions**
+- **multi‑realm braids that alter the Xi/Psi substrate**
+- **causal rewrites that change how future movements behave**
+- **knots that store or release system‑wide tension**
+
+This is the card you use when a movement is no longer “a movement” but **a new law of motion**.
+
+If you want, I can cut **Movement Card v0.9** next — the version that introduces **causal invariants**, **substrate‑level conservation laws**, and **self‑healing topology**, letting you model _permanent operator‑grade physics_ inside Xanadu.

@@ -1,0 +1,286 @@
+---
+title: ### Debate engine protocol
+timestamp: 2026-05-14T08:30:00
+uid: aa4fd2da
+source: 202605140830.md
+tags: [status:actionable, status:blocked, struct:list]
+---
+### Debate engine protocol
+
+#### 1. Roles
+
+- **System/Moderator:**  
+    **Purpose:** Enforces rules, tracks rounds, summarizes outcome.
+- **Agent A (Proponent):**  
+    **Purpose:** Argues _for_ the proposition.
+- **Agent B (Opponent):**  
+    **Purpose:** Argues _against_ the proposition.
+- **(Optional) Judge/Evaluator:**  
+    **Purpose:** Scores arguments and selects a winner or best answer.
+
+---
+
+#### 2. Core objects
+
+- **DebateConfig:**
+    
+    - **proposition:** Natural-language statement to debate.
+    - **rounds:** Integer, number of rebuttal rounds (e.g., 2).
+    - **max_tokens_per_turn:** Soft cap on verbosity.
+    - **evaluation_criteria:** List (e.g., `{clarity, evidence, logical coherence, relevance, humility about uncertainty}`).
+    - **decision_rule:** Majority vote, judge score, or moderator synthesis.
+- **Turn:**
+    
+    - **speaker:** `{Moderator | AgentA | AgentB | Judge}`
+    - **phase:** `{Opening, Rebuttal, CrossExam, Closing, Verdict}`
+    - **content:** Natural-language argument.
+    - **metadata:** Optional (scores, flags, citations, etc.).
+- **DebateState:**
+    
+    - **config:** `DebateConfig`
+    - **history:** Ordered list of `Turn`
+    - **current_round:** Integer
+    - **phase:** Current phase enum
+    - **status:** `{Running, Completed}`
+
+---
+
+#### 3. Phases and flow
+
+1. **Initialization**
+    
+    - **Input:** `proposition`, `rounds`, `evaluation_criteria`.
+    - **Moderator:**
+        - Announces rules.
+        - Assigns roles (Agent A = “Pro”, Agent B = “Con”).
+2. **Opening statements (Phase = Opening)**
+    
+    - **Order:**
+        1. Moderator states the proposition and constraints.
+        2. Agent A: Opening statement (no access to B’s opening yet, if you want strict independence).
+        3. Agent B: Opening statement.
+    - **Goal:** Lay out main thesis, key arguments, and assumptions.
+3. **Rebuttal rounds (Phase = Rebuttal)**
+    
+    - For each round `r` in `1..rounds`:
+        1. Agent A rebuts B’s previous arguments and may refine its own.
+        2. Agent B rebuts A’s previous arguments and may refine its own.
+    - **Constraints:**
+        - Focus on:
+            - **Identify-claim:** Quote or paraphrase opponent’s claim.
+            - **Critique:** Explain flaw (logical, empirical, missing context).
+            - **Defend/Update:** Defend own prior claim or revise it explicitly.
+4. **(Optional) Cross-examination (Phase = CrossExam)**
+    
+    - Each agent asks **short, pointed questions**; the other must answer directly.
+    - Useful format:
+        - **Question:** ≤ 2 sentences.
+        - **Answer:** ≤ 3 sentences, must address question explicitly.
+5. **Closing statements (Phase = Closing)**
+    
+    - Order:
+        1. Agent A: Closing summary.
+        2. Agent B: Closing summary.
+    - **Goal:** Synthesize strongest points, acknowledge remaining uncertainty, state final position.
+6. **Verdict (Phase = Verdict)**
+    
+    - **If Judge present:**
+        - Judge scores each agent on each criterion (e.g., 1–10).
+        - Judge declares:
+            - Winner (A or B), or
+            - Best synthesized answer (may combine both).
+    - **If no Judge:**
+        - Moderator produces:
+            - A neutral summary of the debate.
+            - A “best-effort” conclusion based on criteria.
+
+---
+
+#### 4. Minimal “runnable” loop (pseudo-protocol)
+
+You can think of this as the control loop for any environment (code, notebook, or manual):
+
+1. **Create `DebateConfig`.**
+2. **Initialize `DebateState` with empty history.**
+3. **Moderator → Turn(Opening, rules + proposition).**
+4. **Agent A → Turn(Opening, opening statement).**
+5. **Agent B → Turn(Opening, opening statement).**
+6. **For each rebuttal round:**
+    - Agent A → Turn(Rebuttal, referencing B’s last content).
+    - Agent B → Turn(Rebuttal, referencing A’s last content).
+7. **(Optional) Cross-exam:**
+    - Agent A question → Agent B answer.
+    - Agent B question → Agent A answer.
+8. **Closing:**
+    - Agent A → Turn(Closing).
+    - Agent B → Turn(Closing).
+9. **Verdict:**
+    - Judge or Moderator → Turn(Verdict, scores + conclusion).
+10. **Set `DebateState.status = Completed`.**
+
+You can enforce structure by requiring each agent’s output to follow a template, e.g.:
+
+- **Template for Rebuttal:**
+    - **1. Opponent’s key claims I’m addressing**
+    - **2. Critique of those claims**
+    - **3. Defense or revision of my own position**
+    - **4. Updated stance in one sentence**
+
+---
+
+### Sample debate between two agents
+
+**Proposition:**  
+“Widespread remote work is _net beneficial_ for knowledge-based organizations.”
+
+Roles:
+
+- **Agent A (Pro):** Argues that remote work is net beneficial.
+- **Agent B (Con):** Argues that remote work is not net beneficial.
+- **Moderator:** Runs the protocol and issues a verdict (no separate Judge).
+
+---
+
+#### Phase: Opening
+
+**Moderator:**  
+Today’s proposition is: _“Widespread remote work is net beneficial for knowledge-based organizations.”_  
+Agent A will argue **for** the proposition. Agent B will argue **against** it.  
+We will have: opening statements, two rebuttal rounds, and closing statements, followed by a moderator verdict.
+
+---
+
+**Agent A (Pro, Opening):**  
+Remote work is net beneficial because it expands the talent pool, increases flexibility, and often improves deep-work productivity.  
+Organizations are no longer constrained by geography, which allows them to hire specialized talent that would never relocate.  
+Many knowledge workers report higher satisfaction and better work–life integration when they can control their environment and schedule.  
+While remote work introduces coordination challenges, these can be mitigated with intentional processes, asynchronous communication, and clear documentation.  
+On balance, the gains in access to talent, retention, and focused work outweigh the costs of managing distributed teams.
+
+---
+
+**Agent B (Con, Opening):**  
+Remote work is not net beneficial because it erodes informal communication, weakens culture, and complicates collaboration on complex problems.  
+Serendipitous hallway conversations, quick whiteboard sessions, and subtle social cues are much harder to replicate online.  
+Over time, this can reduce innovation, slow onboarding, and create silos between teams and functions.  
+Remote work also blurs boundaries between work and home, which can lead to burnout and disengagement if not carefully managed.  
+Even if some individuals thrive remotely, at the organizational level the hidden coordination and cultural costs often outweigh the perceived productivity gains.
+
+---
+
+#### Phase: Rebuttal – Round 1
+
+**Agent A (Pro, Rebuttal 1):**  
+**Opponent’s key claims I’m addressing:**  
+Agent B argues that remote work harms culture, serendipity, and collaboration, and that these losses outweigh benefits.
+
+**Critique:**  
+First, culture is not a building; it’s shared norms and behaviors. Those can be intentionally cultivated in remote settings through rituals, clear values, and deliberate communication.  
+Second, “serendipity” is often romanticized. Many in-office interactions are low-signal interruptions; remote work allows teams to design structured forums—like virtual office hours, cross-team demos, and interest channels—that surface ideas without constant distraction.  
+Third, complex collaboration can be supported by modern tools: shared documents, digital whiteboards, and recorded discussions create persistent artifacts that are actually _easier_ to revisit than ephemeral in-person conversations.
+
+**Defense/Revision of my own position:**  
+I maintain that access to global talent and improved focus time are structural advantages. However, I acknowledge that organizations must invest in remote-first practices; remote work done “by accident” can indeed fail.
+
+**Updated stance (one sentence):**  
+Remote work is net beneficial _when organizations design for it_, and those design levers are widely available and practical.
+
+---
+
+**Agent B (Con, Rebuttal 1):**  
+**Opponent’s key claims I’m addressing:**  
+Agent A claims culture can be fully recreated online, serendipity is overrated, and tools compensate for lost in-person collaboration.
+
+**Critique:**  
+Culture may not be a building, but physical co-presence accelerates trust-building, especially for new hires and cross-cultural teams; video calls rarely convey the same richness of interaction.  
+Serendipity is not just “random chats”—it’s the unplanned collision of perspectives that spark ideas; scheduled virtual events tend to attract the same engaged subset of people and miss the quieter voices who benefit from ambient exposure.  
+Digital tools help, but they also create cognitive overload: constant notifications, fragmented channels, and meeting fatigue can undermine the very focus that remote work is supposed to enhance.
+
+**Defense/Revision of my own position:**  
+I stand by the claim that, at scale, these frictions accumulate. I’ll concede that some highly disciplined organizations can make remote work function well, but they are the exception, not the norm.
+
+**Updated stance (one sentence):**  
+For the median organization, remote work introduces cultural and coordination debt that is rarely repaid, making it not net beneficial.
+
+---
+
+#### Phase: Rebuttal – Round 2
+
+**Agent A (Pro, Rebuttal 2):**  
+**Opponent’s key claims I’m addressing:**  
+Agent B emphasizes trust-building, onboarding, and cognitive overload as systemic weaknesses of remote work.
+
+**Critique:**  
+Trust-building can be accelerated remotely through structured mentorship, frequent 1:1s, and transparent decision logs; many distributed companies have demonstrated strong cohesion without offices.  
+Onboarding challenges are real, but they are often a symptom of poor documentation and ad-hoc processes that _also_ hurt in-office teams—remote work simply exposes these weaknesses.  
+Regarding cognitive overload, that is a management and tooling problem, not an inherent property of remote work; teams can adopt norms like “async by default,” meeting caps, and focus blocks to reduce noise.
+
+**Defense/Revision of my own position:**  
+I acknowledge that remote work amplifies both good and bad practices. My claim is not that remote is automatically beneficial, but that it offers a higher ceiling of organizational effectiveness when paired with intentional design.
+
+**Updated stance (one sentence):**  
+Remote work is net beneficial because it unlocks structural advantages that, with reasonable discipline, most knowledge organizations can realistically achieve.
+
+---
+
+**Agent B (Con, Rebuttal 2):**  
+**Opponent’s key claims I’m addressing:**  
+Agent A argues that remote work merely exposes existing problems and that “reasonable discipline” is enough to realize its benefits.
+
+**Critique:**  
+The assumption of “reasonable discipline” is non-trivial—most organizations struggle to maintain even basic meeting hygiene and documentation standards; adding remote complexity raises the bar beyond what many can sustain.  
+Examples of successful remote-first companies often involve self-selecting, highly motivated workers and strong leadership; extrapolating from these cases to the broader landscape is optimistic.  
+Moreover, hybrid realities—where some are remote and others are in-office—can create inequities in visibility and influence, which are difficult to solve and can damage morale.
+
+**Defense/Revision of my own position:**  
+I’ll refine my claim: remote work can be beneficial in specific contexts (e.g., highly technical, globally distributed teams), but as a _widespread_ default, it introduces systemic risks that many organizations are not equipped to manage.
+
+**Updated stance (one sentence):**  
+Given typical organizational constraints, widespread remote work is more likely to degrade cohesion and effectiveness than to improve it.
+
+---
+
+#### Phase: Closing statements
+
+**Agent A (Pro, Closing):**  
+Remote work expands the talent pool, supports deep work, and enables more inclusive, flexible careers.  
+While it demands intentional processes, those investments pay off in resilience, documentation quality, and access to global expertise.  
+The challenges raised by my opponent—trust, culture, overload—are real but tractable, and many are present in offices as well.  
+Therefore, when evaluated over the long term and with realistic improvements in practice, widespread remote work is net beneficial for knowledge-based organizations.
+
+---
+
+**Agent B (Con, Closing):**  
+Remote work promises flexibility and access to talent, but it also dilutes informal communication, complicates collaboration, and strains culture.  
+Most organizations lack the discipline, leadership, and process maturity required to consistently overcome these challenges at scale.  
+The result is often fragmented communication, uneven engagement, and a slow erosion of shared identity and trust.  
+For these reasons, as a _widespread_ default, remote work is not net beneficial for knowledge-based organizations, even if it works well for a subset of them.
+
+---
+
+#### Phase: Verdict (Moderator)
+
+**Moderator (Verdict):**  
+Using criteria of clarity, evidence, logical coherence, and acknowledgment of uncertainty:
+
+- **Agent A (Pro):**
+    
+    - **Strengths:** Clear articulation of structural advantages (talent, focus, documentation), good acknowledgment that remote requires intentional design, and concrete mitigation strategies.
+    - **Weaknesses:** Relies on the assumption that “reasonable discipline” is broadly achievable, with limited discussion of failure modes in less mature organizations.
+- **Agent B (Con):**
+    
+    - **Strengths:** Strong emphasis on typical organizational constraints, realistic concerns about hybrid inequities and process immaturity, and nuanced concession that remote can work in specific contexts.
+    - **Weaknesses:** Less exploration of how organizations might realistically improve to capture remote benefits; somewhat status-quo biased.
+
+**Synthesis:**  
+The debate suggests that remote work is a _high-variance_ strategy: it can be strongly beneficial for organizations willing and able to redesign their practices, but may be net harmful when adopted casually or under weak leadership.  
+A refined conclusion is:
+
+> Widespread remote work is net beneficial **only** for knowledge-based organizations that intentionally invest in remote-first culture, processes, and tooling; for others, the risks may outweigh the benefits.
+
+---
+
+If you want, next step we can:
+
+- Turn this into a concrete JSON schema and message format, or
+- Adapt the protocol to your exact multi-agent environment (e.g., specific tools, memory, or evaluation hooks).

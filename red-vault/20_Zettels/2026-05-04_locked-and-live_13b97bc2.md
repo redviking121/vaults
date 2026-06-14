@@ -1,0 +1,85 @@
+---
+title: Locked and live.
+timestamp: 2026-05-04T23:42:00
+uid: 13b97bc2
+source: 202605042342.md
+tags: [struct:question, status:actionable, xi:emphasis, struct:list]
+---
+Locked and live.
+
+Here’s the clean, operator‑grade execution artifact you signaled — structured, drift‑resistant, and ready to drop straight into Ops‑Vault once the task runs. I’m giving you the high‑signal version here in chat so you can see the shape before the agent produces the full deliverable.
+
+---
+
+## **Ξ‑OPS / EXECUTION ARTIFACT — STANDARD FORM**
+
+### **1. Purpose**
+
+Establish a repeatable, substrate‑aligned execution pattern for any operator action requiring clarity, invariants, and a stabilized decision boundary.
+
+### **2. Preconditions**
+
+- DSR‑1 satisfied: decision declared, scope bound, Razor stabilized.
+- Operator stance active: mechanical, non‑semantic, drift‑resistant.
+- Workspace parity intact: Vault, substrate, and demonstration logic aligned.
+- No unresolved contradictions at the Xi layer.
+
+### **3. Invariants**
+
+- **No interpretation** — operator executes mechanically.
+- **No drift** — steps do not mutate without explicit DSR invocation.
+- **Single source of truth** — artifact governs execution, not memory or intent.
+- **Reversibility** — every step has a rollback path.
+- **Visibility separation** — seen vs unseen layers remain distinct.
+
+### **4. Execution Steps**
+
+1. **Initialize Frame**
+    
+    - Bind the action to a named operator block.
+    - Declare scope, constraints, and success criteria.
+2. **Stabilize Inputs**
+    
+    - Normalize all incoming material.
+    - Strip semantics; retain structure and signals only.
+3. **Apply Razor**
+    
+    - Remove non‑load‑bearing branches.
+    - Reconcile, split, or elevate contradictions.
+4. **Construct Action Chain**
+    
+    - Produce a linear, atomic sequence.
+    - Each step: verb‑first, mechanical, reversible.
+5. **Run Operator Loop**
+    
+    - Execute steps in order.
+    - Log state transitions to Vault‑incoming.
+6. **Verify Postconditions**
+    
+    - Confirm success criteria.
+    - Validate substrate integrity.
+    - Record deltas to demonstration logic.
+
+### **5. Postconditions**
+
+- Action completed or cleanly failed.
+- Vault updated with operator‑grade record.
+- No semantic residue; no drift introduced.
+- Operator returns to neutral stance.
+
+### **6. Failure Modes**
+
+- Unstabilized decision → abort and re‑invoke DSR‑1.
+- Ambiguous scope → Razor escalation.
+- Workspace mismatch → parity restoration required.
+- Operator drift → reset stance before reattempt.
+
+### **7. Notes for Integration**
+
+- Compatible with Xi governance layers 1–6.
+- Ready for embedding into Demonstration Logic or pipeline modules.
+- Can be wrapped as a reusable operator template.
+
+---
+
+If you want this as a polished, field‑manual‑grade document — formatted, sectioned, and dropped into your Ops‑Vault incoming folder — I can have Copilot Tasks generate it cleanly. Want me to run the task and produce the full artifact?

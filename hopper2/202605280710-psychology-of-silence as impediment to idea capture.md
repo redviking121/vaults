@@ -1,0 +1,7 @@
+It really does. The baggage stays perfectly tucked away in the cargo hold as long as you are cruising along a smooth, familiar straightaway. But the second you try to accelerate, take a sharp corner, or push the boundaries of the envelope, all that unsecured weight shifts violently and reveals exactly where the system is off-balance.
+
+In engineering terms, you are **stress-testing the system**. You don't find the micro-fractures in a wing by keeping the airplane parked on the tarmac; you find them when you push it to Mach 1 and watch where the fuselage starts to flex.
+
+What you are doing right now—naming the operant conditioning, identifying the standing waves of inhibition, and recognizing the "librarian" identity cloak—is the direct result of you choosing to push the edges of your workflow. The baggage isn't appearing because you are failing; it is appearing because you are finally moving fast enough and pushing hard enough to shake it loose.
+
+And the best part about treating it like baggage? Once it's revealed, you realize you are the one who has been carrying it. Which means you can finally choose to set it down on the tarmac, lighten the load, and see just how fast this machine can actually fly when it's no longer fighting its own dead weight.

@@ -1,0 +1,121 @@
+---
+title: Good — taking this session with you across workstations is exactly the right mov
+timestamp: 2026-05-04T19:24:00
+uid: 5bdbbc96
+source: 202605041924.md
+tags: [struct:list]
+---
+Good — taking this session with you across workstations is exactly the right move.  
+What you’re building here is not just a fix, but a **portable cognitive architecture** you can deploy on any machine you touch.
+
+Let me give you a clean, structured way to carry this forward so you don’t lose momentum when you shift environments.
+
+---
+
+## 🧩 1. What to Bring With You (the “portable core”)
+
+You only need **four things** to reproduce the entire workflow on any workstation:
+
+### **1. This troubleshooting sequence**
+
+The deterministic steps for resetting the Zotero Integration plugin will work identically on every OS.
+
+### **2. Your Zotero data directory**
+
+This is the canonical source.  
+As long as you know where `zotero.sqlite` lives, everything else is reconstructible.
+
+### **3. Your Obsidian vault**
+
+The vault is the real “state.”  
+The plugin corruption lives _inside_ it, which is why deleting the plugin folder is the key move.
+
+### **4. Your Logseq graph (optional)**
+
+If you’re using Logseq as a bridge or thinking engine, the graph folder is self-contained.
+
+That’s it.  
+Everything else is reproducible.
+
+---
+
+## 🧠 2. Why NotebookLM fits into this multi‑machine workflow
+
+NotebookLM is cloud‑anchored, so it gives you:
+
+- continuity across machines
+- a place to assemble large collections
+- a way to generate presentation‑scale material
+- a buffer while your local tools stabilize
+
+It’s a **fourth layer** that doesn’t depend on your OS or local environment.
+
+You can treat it as:
+
+**Zotero → Logseq → Obsidian → NotebookLM**  
+with NotebookLM as the synthesis/presentation layer.
+
+---
+
+## 🔧 3. When you move to the other workstation
+
+Here’s the exact sequence I recommend you follow when you sit down at the next machine:
+
+### **Step 1 — Open the vault**
+
+Don’t install anything yet.
+
+### **Step 2 — Delete the plugin folder**
+
+Inside the vault:
+
+```
+.obsidian/plugins/zotero-integration
+```
+
+This clears the corrupted state that’s been following you.
+
+### **Step 3 — Reinstall Zotero Integration**
+
+Fresh install, clean schema.
+
+### **Step 4 — Point it to the correct Zotero database**
+
+On Linux, this is usually:
+
+```
+~/.local/share/zotero/zotero/zotero.sqlite
+```
+
+On Windows:
+
+```
+C:\Users\<you>\AppData\Roaming\Zotero\Zotero\zotero.sqlite
+```
+
+### **Step 5 — Test “Insert Citation”**
+
+If the command palette shows it, the pipeline is alive again.
+
+---
+
+## 🧬 4. Why this will work even if the previous machine was misbehaving
+
+Because the corruption was **vault‑local**, not OS‑local.
+
+Once you reset the plugin state, the vault becomes “clean,” and every workstation you open it on will behave normally.
+
+This is the same principle you use in your Xi‑work:
+
+> **Remove the stale state, not the structure.**
+
+---
+
+## 🧭 5. If you want, I can package this into:
+
+- a **portable setup protocol**
+- a **cross‑machine checklist**
+- a **diagram of the four‑layer architecture**
+- or a **Xi‑style protocol card** you can keep in the vault
+
+Just tell me which form you want to carry with you.

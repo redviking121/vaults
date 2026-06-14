@@ -1,0 +1,163 @@
+---
+title: Understood, Red.
+timestamp: 2026-05-05T04:00:00
+uid: 5bd428db
+source: 202605050400.md
+tags: [status:actionable, struct:future, struct:list]
+---
+Understood, Red.  
+Here is the **published artifact**, clean, self‑contained, and ready for the Ops‑Vault.  
+No drift. No chatter. No extra scaffolding.  
+Just the mission, the steps, and the exit.
+
+---
+
+# **📘 Mini Ops Project — Open‑WebUI Service Promotion v0.1**
+
+_Status: Published_  
+_Location: Ops‑Vault → 30_Protocols/openwebui-service-promotion.md_
+
+---
+
+## **🎯 Objective**
+
+Promote Open‑WebUI from a terminal‑bound process to a stable, user‑level service that:
+
+- launches without a terminal
+- survives logout
+- restarts on failure
+- uses a single canonical venv
+- is fully documented for future operators
+
+---
+
+## **🌊 0. Conditions: CALM WATERS**
+
+Proceed only when:
+
+- system is stable
+- no competing Open‑WebUI processes
+- operator is deliberate and present
+- no venvs are activated
+
+---
+
+## **1. Ingress**
+
+Confirm the canonical venv:
+
+```
+ls /home/red/venvs/openwebui/
+```
+
+Success: directory contains `bin/`, `lib/`, `pyvenv.cfg`.
+
+---
+
+## **2. Hit the Beach (Execution Phase)**
+
+### **2.1 Deploy Launcher Script**
+
+Create:
+
+```
+nano ~/bin/openwebui
+```
+
+Insert:
+
+```
+#!/usr/bin/env bash
+exec /home/red/venvs/openwebui/bin/open-webui serve
+```
+
+Make executable:
+
+```
+chmod +x ~/bin/openwebui
+```
+
+Success: `openwebui` launches the server.
+
+---
+
+### **2.2 Deploy systemd User Service**
+
+Create:
+
+```
+nano ~/.config/systemd/user/openwebui.service
+```
+
+Insert:
+
+```
+[Unit]
+Description=Open-WebUI Server
+After=network.target
+
+[Service]
+ExecStart=/home/red/venvs/openwebui/bin/open-webui serve
+Restart=always
+RestartSec=3
+WorkingDirectory=/home/red
+
+[Install]
+WantedBy=default.target
+```
+
+Activate:
+
+```
+systemctl --user daemon-reload
+systemctl --user enable openwebui
+systemctl --user start openwebui
+```
+
+Success: service reports **active (running)**.
+
+---
+
+## **3. Secure the Beachhead**
+
+Validate independence from terminal:
+
+- close terminal
+- reopen
+- run:
+
+```
+systemctl --user status openwebui
+```
+
+Success: service still running.
+
+---
+
+## **4. Exfil**
+
+Mission complete when:
+
+- Open‑WebUI runs without terminal
+- survives logout
+- restarts on failure
+- uses canonical venv
+- documented in Ops‑Vault
+
+Operator extracts clean.
+
+---
+
+## **5. Debrief (Optional)**
+
+Future calm‑water tasks:
+
+- remove stray venvs
+- add reverse proxy
+- add health checks
+- integrate with AI‑Razor governance
+
+---
+
+Red — the artifact is now published.  
+If you want the **cleanup pass** or the **reverse‑proxy layer** next, just give the word.

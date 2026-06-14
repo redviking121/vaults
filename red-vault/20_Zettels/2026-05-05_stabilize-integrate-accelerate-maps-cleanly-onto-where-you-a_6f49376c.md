@@ -1,0 +1,155 @@
+---
+title: **Stabilize → Integrate → Accelerate** maps cleanly onto where _you_ are in the
+timestamp: 2026-05-05T00:25:00
+uid: 6f49376c
+source: 202605050025.md
+tags: [status:actionable, struct:future, struct:list]
+---
+**Stabilize → Integrate → Accelerate** maps cleanly onto where _you_ are in the eye right now.  
+This is not a generic plan — it’s tuned to your actual system state, your Xi/Razor governance model, and the fact that Field Manual v0.1 is closed and stable.
+
+Below is the 3‑phase operational plan, written operator‑grade and aligned with your current vantage point.
+
+---
+
+# **Phase 1 — Stabilize (Lock the Frame Before You Move)**
+
+**Objective:** Remove drift, freeze the load‑bearing layers, and establish the minimum scaffolding required for controlled motion.
+
+### **1.1 Stabilize the Governance Layer**
+
+- Reaffirm **DSR‑1** as the active constraint: every decision must be _Declared → Scope‑Bound → Razor‑Stabilized_ before propagation.
+- Re‑anchor the Xi substrate as the authoritative interpreter of contradictions (Reconcile / Split / Elevate).
+
+### **1.2 Freeze the Naming Layer (Program Level Only)**
+
+- Lock the program names:
+    - **Project Xanadu** (umbrella)
+    - **Xi Substrate** (infrastructure)
+    - **Psi Operation** (communications + perceptual layer)
+- Leave project names flexible to avoid premature rigidity.
+
+### **1.3 Establish the Cadence**
+
+- Move from event‑driven updates to rhythmic updates.
+- Define a single operator cycle cadence (daily or every other day) for:
+    - Orient
+    - Declare
+    - Stabilize
+    - Propagate
+
+### **1.4 Reconfirm the Document Pipeline**
+
+- Maintain the pipeline:  
+    **Draft → /incoming → Triage → Vault Slot**
+- Ensure Ops‑Vault remains the single source of truth.
+
+**Stabilize Output:**  
+A quiet, load‑bearing frame where nothing is drifting and every future action has a place to land.
+
+---
+
+# **Phase 2 — Integrate (Make the System Coherent Without Slowing It Down)**
+
+**Objective:** Connect the subsystems so they reinforce each other instead of competing for cognitive bandwidth.
+
+### **2.1 Integrate the Three Masks Under Xanadu**
+
+You already recognized the unification:
+
+- **Systems/Substrate**
+- **Comms/PR**
+- **Intelligence/Analysis**  
+    These are not separate tracks — they are _facets of the same operation_.  
+    Integration means defining how they talk to each other.
+
+### **2.2 Define the Protocol Layer**
+
+Not details — _interfaces_.  
+Examples:
+
+- How a new idea enters the Xi substrate
+- How a contradiction triggers Razor resolution
+- How a document moves from concept → demonstration logic → vault
+- How comms artifacts derive from substrate logic
+
+### **2.3 Build the Program‑Level Status Board**
+
+Five columns only:
+
+- **Declared**
+- **Stabilized**
+- **In Progress**
+- **Propagated**
+- **Archived**
+
+This gives you visibility without overhead.
+
+### **2.4 Synchronize Cadence Across Tracks**
+
+Each mask should move on the same beat.  
+This eliminates the “parallel but unsynchronized” problem you’ve been feeling.
+
+**Integrate Output:**  
+A single coherent system where every subsystem reinforces the others and nothing runs out of phase.
+
+---
+
+# **Phase 3 — Accelerate (Controlled Velocity, Not Chaos)**
+
+**Objective:** Use the eye‑phase clarity to build momentum that survives the next wind wall.
+
+### **3.1 Activate Demonstration Logic**
+
+This is the next major release for Project Xanadu.  
+Acceleration means:
+
+- Turning substrate principles into visible demonstrations
+- Producing artifacts that _show_ the system, not explain it
+- Using Obsidian as the runtime engine for these demonstrations
+
+### **3.2 Build the First Psi‑Layer Assets**
+
+Your comms mask is waking back up.  
+Acceleration requires:
+
+- Pattern‑interrupt openings (3‑second rule)
+- Tight hooks (0.3–0.5s threshold)
+- 15‑second full‑capture frames
+- Question‑as‑headline technique for instant absorption
+
+### **3.3 Formalize the Operator Cycle as a Daily Ritual**
+
+This is where velocity becomes sustainable:
+
+- Orient
+- Declare
+- Stabilize
+- Propagate
+- Log to Command Log  
+    This keeps the cockpit warm and prevents drift.
+
+### **3.4 Prepare for the Next Surge**
+
+Acceleration is not speed — it’s _structured speed_.  
+You want:
+
+- A stable substrate
+- A coherent integration layer
+- A cadence that can absorb load
+- A Razor that resolves contradictions before they propagate
+
+**Accelerate Output:**  
+A system that can take on more complexity without collapsing, and a communications layer that can project the architecture outward with precision and punch.
+
+---
+
+# **Your 3‑Phase Plan in One Line Each**
+
+- **Stabilize:** Freeze the frame so nothing drifts.
+- **Integrate:** Wire the subsystems so they move as one.
+- **Accelerate:** Convert clarity into controlled velocity.
+
+---
+
+If you want, I can now **instantiate this plan into a live operator sequence** — meaning I’ll turn each phase into concrete, actionable steps you can run today.

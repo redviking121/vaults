@@ -1,0 +1,179 @@
+---
+title: Understood, Red. I’ll surface the **clean, operator‑grade roadmap** for building
+timestamp: 2026-05-04T23:47:00
+uid: 9867a765
+source: 202605042347.md
+tags: [status:actionable, struct:list]
+---
+Understood, Red. I’ll surface the **clean, operator‑grade roadmap** for building a _proper_ Obsidian plugin — the one I outlined before Mounty pulled focus — and I’ll also shape it into an **Operator Card** so you can run it without drift.
+
+This is the **canonical sequence** for building a real plugin, not the toy hello_world. This is the path you’ll reuse for every plugin in the Xanadu stack.
+
+---
+
+# **OPERATOR CARD — Obsidian Plugin: Proper Build Pipeline (v1.0)**
+
+_Purpose: Establish the repeatable, operator‑grade workflow for building plugins in the Xi/Razor substrate._
+
+---
+
+## **1. Create the Plugin Skeleton (Clean Room Start)**
+
+**Intent:** Ensure no ghost state, no legacy residue, no contaminated scaffolding.
+
+- Create a new folder under `vault/.obsidian/plugins/<plugin-id>/`
+- Initialize with:
+    - `manifest.json`
+    - `main.ts`
+    - `styles.css` (optional)
+    - `package.json`
+    - `tsconfig.json`
+    - `.gitignore`
+- Install Obsidian API types:  
+    `npm install --save-dev obsidian`
+
+**Operator check:**  
+Folder exists, files present, no red flags from TypeScript.
+
+---
+
+## **2. Define the Plugin Identity (manifest.json)**
+
+**Intent:** Bind the plugin’s name, version, and entrypoint.
+
+Minimum viable manifest:
+
+```json
+{
+  "id": "my-plugin",
+  "name": "My Plugin",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Operator-grade plugin.",
+  "author": "Red Horne",
+  "isDesktopOnly": false
+}
+```
+
+**Operator check:**  
+Obsidian recognizes the plugin in the Community Plugins list.
+
+---
+
+## **3. Implement the Plugin Class (main.ts)**
+
+**Intent:** Establish the lifecycle hooks and command surface.
+
+Core structure:
+
+```ts
+import { Plugin } from "obsidian";
+
+export default class MyPlugin extends Plugin {
+  async onload() {
+    console.log("MyPlugin loaded");
+
+    this.addCommand({
+      id: "my-command",
+      name: "Run My Command",
+      callback: () => {
+        console.log("Command fired");
+      }
+    });
+  }
+
+  onunload() {
+    console.log("MyPlugin unloaded");
+  }
+}
+```
+
+**Operator check:**
+
+- Plugin loads without errors
+- Command appears in palette
+- Command fires cleanly
+
+---
+
+## **4. Build Pipeline (TypeScript → JS)**
+
+**Intent:** Ensure reproducible builds and clean output.
+
+- Run: `npm install`
+- Build: `npm run build`  
+    (usually mapped to `tsc`)
+
+**Operator check:**  
+`main.js` appears in plugin folder. No red stack traces.
+
+---
+
+## **5. Load Plugin in Obsidian (Live Test)**
+
+**Intent:** Validate the plugin in the real substrate.
+
+- Toggle plugin ON
+- Run command from palette
+- Observe console output
+- Confirm no silent failures
+
+**Operator check:**  
+Plugin behaves exactly as expected. No drift.
+
+---
+
+## **6. Add Real Functionality (Operator‑Grade Features)**
+
+**Intent:** Move from toy to tool.
+
+Common next steps:
+
+- Add settings tab
+- Add ribbon icon
+- Add file operations
+- Add event listeners
+- Add workspace interactions
+- Add vault ingestion logic (for ops‑vault‑ingest plugin)
+
+**Operator check:**  
+Each feature added with clean deltas, no regressions.
+
+---
+
+## **7. Versioning & Release Discipline**
+
+**Intent:** Maintain substrate integrity.
+
+- Increment version in `manifest.json`
+- Tag in git
+- Keep CHANGELOG.md
+- Never ship unverified builds
+
+**Operator check:**  
+Version history is linear, stable, and auditable.
+
+---
+
+## **8. Integration with Ops‑Vault / Xanadu**
+
+**Intent:** Bind plugin behavior to the Xi substrate.
+
+Examples:
+
+- Write to `incoming/`
+- Trigger ingestion
+- Generate operator cards
+- Surface demonstration logic
+- Maintain vault parity
+
+**Operator check:**  
+Plugin actions produce predictable, reversible state transitions.
+
+---
+
+# **This is the full roadmap.**
+
+It’s the clean, stable, reusable operator sequence for every plugin you’ll build — including the upcoming **ops‑vault‑ingest** plugin.
+
+If you want, I can now generate a **second Operator Card** specifically for the _hello_world → proper plugin_ transition, or for the **ops‑vault‑ingest** plugin’s architecture.

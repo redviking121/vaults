@@ -1,0 +1,258 @@
+{
+  "main": {
+    "id": "3a03b17b737c2564",
+    "type": "split",
+    "children": [
+      {
+        "id": "7aed40a96a50284c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c8e58b8199ead0b9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_INBOX/drift-log.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "drift-log"
+            }
+          },
+          {
+            "id": "7e0fea6933472a86",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1b4da450d36fbe23",
+    "type": "split",
+    "children": [
+      {
+        "id": "1deb9e818e83669b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d89109bda916915a",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "29f70f7dfbbf6057",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "101780c43ce8577b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 275.5
+  },
+  "right": {
+    "id": "ea5197c11e1184cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "7481fe753f7c469f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fb55795b39265821",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Ops Vault/00  - Engine Infrastructure/affordances/08-Predictive-Affordance-Template/08 — Anomaly Metabolism.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 08 — Anomaly Metabolism"
+            }
+          },
+          {
+            "id": "a2a144a1be612b21",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Ops Vault/00  - Engine Infrastructure/affordances/08-Predictive-Affordance-Template/08 — Anomaly Metabolism.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from 08 — Anomaly Metabolism"
+            }
+          },
+          {
+            "id": "60781fe4f5708952",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "636ddda975c5b429",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "cb4935ba75328b29",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Ops Vault/00  - Engine Infrastructure/affordances/08-Predictive-Affordance-Template/08 — Anomaly Metabolism.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 08 — Anomaly Metabolism"
+            }
+          },
+          {
+            "id": "678fb8677111cc58",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {},
+              "icon": "message-square",
+              "title": "Copilot"
+            }
+          },
+          {
+            "id": "70112c72e58175ac",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "calendar"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "vscode-editor:Create Code File": false,
+      "open-vscode:VS Code": false,
+      "copilot:Open Copilot Chat": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "d89109bda916915a",
+  "lastOpenFiles": [
+    "Ops-Vault/20_DASHBOARDS/00 - Engine Dashboard.md",
+    "00_INBOX/drift-log.md",
+    "Ops-Vault/migration/Chunk0-File13.md.md",
+    "Ops-Vault/migration/Chunk0-File2.md.md",
+    "Ops-Vault/docs/migration/Magic copy getting started.md",
+    "Fragment-5-Magic-Copy-Icon-as-Structural-Ally.md",
+    "30-Investigative-Threads/README.md",
+    "00_INBOX",
+    "muse/README.md",
+    "30-Investigative-Threads",
+    "muse",
+    "copilot/copilot-conversations/Implement_Gemini_Notes_Steps@20260427_173512.md",
+    "Fragment-4-Naming-Conventions-Readability-as-Operator-Stance.md",
+    "Fragment-3-The-Meaning-of-No-Pull-Operator-Neutrality.md",
+    "Fragment-2-Ξ.Capsules-and-Zettelkasten-as-Cousins.md",
+    "Fragment-1-Copilot-Resonates-with-the-Tao.md",
+    "docs/ops-eureka.md",
+    "copilot/copilot-conversations/Confirm_Unsnap_Version_Only@20260427_142448.md",
+    "copilot/copilot-conversations/No_Git_Repository_Detected@20260427_141839.md",
+    "copilot/copilot-conversations/Flatpak_Installation_Issue@20260427_134002.md",
+    "copilot/copilot-conversations/Snap_Obsidian_Session_Restart@20260427_131023.md",
+    "copilot/copilot-conversations/Phantom_Ops_Vault_Pointer_Lingers@20260427_124925.md",
+    "Ops-Vault/10_CARDS/active/Integrate one pager into vault.md",
+    "docs",
+    "Ops-Vault/10_CARDS/card.md",
+    "Ops-Vault/README.md.md",
+    "copilot/copilot-conversations/Vault_Cleanup_Assistance@20260427_122852.md",
+    "copilot/copilot-conversations",
+    "copilot/copilot-custom-prompts/Clip Web Page.md",
+    "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
+    "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
+    "copilot/copilot-custom-prompts",
+    "copilot",
+    "Ops-Vault/70_Glossaries/echo-forge",
+    "Ops-Vault/70_Glossaries/substrate",
+    "Ops-Vault/70_Glossaries/razor"
+  ]
+}

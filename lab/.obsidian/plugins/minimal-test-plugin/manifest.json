@@ -1,0 +1,10 @@
+{
+  "id": "minimal-test-plugin",
+  "name": "Minimal Test Plugin",
+  "version": "1.0.0",
+  "minAppVersion": "1.12.7",
+  "description": "A minimal test plugin",
+  "author": "Red",
+  "isDesktopOnly": false,
+  "main": "main.js"
+}

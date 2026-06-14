@@ -1,0 +1,2 @@
+- Building a 'Narrative Operating System' (story producing engine) to showcase their worldview.
+- The engine aims to propagate specific concepts like 'razor' and 'trms' to foster fandom and engagement with their world-building.

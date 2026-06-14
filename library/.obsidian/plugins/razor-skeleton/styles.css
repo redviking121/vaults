@@ -1,0 +1,7 @@
+.razor-skeleton-ribbon {
+  color: var(--text-accent);
+}
+
+.razor-skeleton-ribbon:hover {
+  color: var(--text-accent-hover);
+}

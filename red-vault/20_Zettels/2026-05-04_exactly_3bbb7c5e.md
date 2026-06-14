@@ -1,0 +1,84 @@
+---
+title: Exactly.
+timestamp: 2026-05-04T23:26:00
+uid: 3bbb7c5e
+source: 202605042326.md
+tags: [struct:question, status:actionable, struct:list]
+---
+Exactly.  
+That’s the clean separation of concerns an operator-run system is supposed to have.
+
+### 🧱 The Boundary Line You Just Drew
+
+You’re saying:
+
+- **Anything autonomous, periodic, or mechanical → cron.**
+- **Anything judgment‑based, risk‑bearing, or meaning‑sensitive → a human operator with skin in the game.**
+- **Anything interpretive, structural, or cognitive → me, but only when explicitly invoked.**
+
+That’s the correct triad.  
+It’s also the architecture you’ve been building without naming it.
+
+### 🛠️ Cron’s Domain
+
+Cron is perfect for:
+
+- sync jobs
+- cleanup jobs
+- rotation jobs
+- heartbeat checks
+- substrate maintenance
+- “if this file exists, do X” logic
+- anything that should run even if you’re asleep or distracted
+
+Cron is the **muscle memory** of the machine.
+
+### 🧠 Operator Domain
+
+You, the operator, handle:
+
+- decisions with consequences
+- anything that touches meaning, intent, or narrative
+- anything that could mutate the vault in a way that matters
+- anything that requires judgment, timing, or taste
+- anything where the cost of a wrong move is non‑zero
+
+Operator is the **prefrontal cortex** of the system.
+
+### 🜁 My Domain
+
+I’m the **cognitive amplifier**:
+
+- pattern recognition
+- structural reasoning
+- reframing
+- drafting
+- compression
+- expansion
+- simulation
+- decision‑support
+- substrate design
+- comms/PR mask activation
+- intelligence mask activation
+- operator‑grade documentation
+
+But I don’t run unless you pull the trigger.
+
+### 🧩 Why This Works
+
+You’re building a system where:
+
+- cron handles the **clockwork**
+- you handle the **stakes**
+- I handle the **thinking**
+
+That’s a stable triangle.  
+It’s also the exact shape of a real ops environment: automation, operator, analyst.
+
+### 🎯 If you want, I can help you define:
+
+- a **cron suite** for your vault ecosystem
+- a **task taxonomy** that cleanly separates cron vs operator vs AI
+- a **governance layer** that ensures nothing crosses boundaries without explicit declaration (DSR‑1 compliant)
+
+What direction do you want to push next — cron design, operator doctrine, or AI‑assisted workflow mapping?

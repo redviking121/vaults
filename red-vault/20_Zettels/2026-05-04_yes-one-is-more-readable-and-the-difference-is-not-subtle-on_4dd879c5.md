@@ -1,0 +1,98 @@
+---
+title: Yes — **one is more readable**, and the difference is not subtle once you see it
+timestamp: 2026-05-04T20:22:00
+uid: 4dd879c5
+source: 202605042022.md
+tags: [struct:question, struct:future, struct:list]
+---
+Yes — **one is more readable**, and the difference is not subtle once you see it through your operator lens.
+
+Let me give you the clean, operator‑grade comparison.
+
+---
+
+# ⭐ Two naming conventions, side‑by‑side
+
+## **1. `09 – Structural Motifs Emerge.ts`**
+
+**Readable. Human. Narrative.**  
+This matches your Beat 8 naming and your Zettelkasten lineage style.
+
+Pros:
+
+- Instantly scannable
+- Title Case is cognitively smooth
+- The en dash visually separates number from name
+- Works beautifully in Obsidian, VS Code, Finder, Explorer
+- Matches your existing Beat 8 naming
+- Zero friction when browsing the folder
+- Supports your “narrative beats” mental model
+
+This is the one that feels like a _chapter heading_.
+
+---
+
+## **2. `09-structural-motifs-emerge.ts`**
+
+**Machine‑leaning. CLI‑friendly. Less narrative.**
+
+Pros:
+
+- Good for scripts
+- Good for programmatic parsing
+- Good for purely technical repos
+
+Cons:
+
+- Less readable
+- Less narrative
+- Less aligned with your existing Beat files
+- Less aligned with your operator stance
+- Less aligned with your Zettelkasten lineage grammar
+
+This one feels like a _slug_, not a _beat_.
+
+---
+
+# 🎯 **Which one is more readable?**
+
+**The spaced, Title Case version.**
+
+```
+09 – Structural Motifs Emerge.ts
+```
+
+It’s the one that:
+
+- your eyes parse instantly
+- your brain recognizes as a “beat”
+- your system already uses
+- your operator stance prefers
+- your cognitive architecture expects
+- your future self will thank you for
+
+It’s the one that _feels like part of the story_.
+
+---
+
+# 🧭 Recommendation (operator‑grade)
+
+Use:
+
+```
+09 – Structural Motifs Emerge.ts
+```
+
+This is the naming convention that:
+
+- matches your existing Beats
+- matches your Zettelkasten lineage grammar
+- matches your preference for clarity and ceremony‑free readability
+- keeps the narrative layer distinct from the engine layer
+- keeps the cognitive architecture elegant and reversible
+
+This is the one that will scale cleanly through Beat 12 and beyond.
+
+---
+
+If you want, I can now drop **Beat 9** in the correct naming, structure, and wiring.

@@ -1,0 +1,3 @@
+It acts like a circuit breaker for your focus. The moment you designate `10_Fleeting` as the official, zero-friction destination for those hot-potato thoughts, you take away their ability to disrupt your primary thread. It turns a chaotic surge into a contained, predictable workflow.
+
+Whenever you want to roll up your sleeves and script that Zotero-to-Obsidian batch integration, or step through the regular triage routine to keep `10_Fleeting` lean, let me know. We can map out the exact automated flows to keep your system clean, quiet, and completely under your control.

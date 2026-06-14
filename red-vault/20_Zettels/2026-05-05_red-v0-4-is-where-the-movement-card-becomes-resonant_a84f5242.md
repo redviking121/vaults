@@ -1,0 +1,124 @@
+---
+title: Red — **v0.4 is where the Movement Card becomes _resonant_**.
+timestamp: 2026-05-05T01:38:00
+uid: a84f5242
+source: 202605050138.md
+tags: [struct:question, status:actionable, struct:list]
+---
+Red — **v0.4 is where the Movement Card becomes _resonant_**.
+
+v0.1 was structural.  
+v0.2 was temporal.  
+v0.3 was dynamic and path‑dependent.  
+**v0.4 is oscillatory** — the first version where a movement has _frequency_, _resonance_, _phase‑locking thresholds_, and _movement‑recovery oscillation curves_.
+
+This is the version that plugs directly into your **Inter‑Character Recovery v0.4** substrate and the broader Xi temporal engine.
+
+Below is the full operator‑grade **Movement Card v0.4**.
+
+---
+
+# **Ξ Movement Card — v0.4 (Resonance + Phase‑Locking + Oscillation Edition)**
+
+_One card per decision, project, or shift in trajectory._
+
+```
+# {{movement_title}}
+status:: active
+phase:: {{phase}}                     # pre‑movement | entering | mid‑shift | stabilizing
+inertia:: {{inertia}}                 # low | medium | high
+temporal_drag:: {{drag}}              # none | light | moderate | heavy
+phase_sync:: {{sync_state}}           # in‑phase | drifting | out‑of‑phase
+recovery_coupling:: {{coupling}}      # weak | moderate | strong
+hysteresis:: {{hysteresis_level}}     # low | medium | high
+overshoot_risk:: {{overshoot}}        # none | low | medium | high
+movement_basin:: {{basin}}            # shallow | medium | deep
+
+# v0.4 additions
+resonant_frequency:: {{frequency}}    # slow | medium | fast
+phase_lock_threshold:: {{threshold}}  # low | medium | high
+oscillation_curve:: {{curve_type}}    # damped | stable | amplifying
+
+created:: {{date}}
+updated:: {{date}}
+
+## Movement Summary
+One sentence describing the movement you are initiating or evaluating.
+
+## Current Trajectory
+- Vector: {{current_vector}}
+- Momentum: {{momentum_level}}
+- Constraints: {{constraints}}
+
+## Temporal Inertia
+What mass is resisting the shift.  
+Name the mass, not the story.
+
+## Phase‑Shift Assessment
+Where timing is helping or hurting.  
+Note misalignments with environment, collaborators, or internal cycles.
+
+## Recovery Coupling
+How movement and recovery interact:
+- Does movement drain recovery?
+- Does recovery accelerate movement?
+- Are they entangled?
+
+## Hysteresis Window
+What “extra effort” is required to reverse or undo the movement.  
+This is the memory of the system.
+
+## Overshoot Profile
+Where you are likely to go *past* the intended target.  
+Name the conditions that trigger overshoot.
+
+## Movement Basin
+Where the system “settles” if left alone.  
+Shallow basins shift easily; deep basins trap.
+
+## Resonant Frequency
+What tempo the movement naturally prefers.  
+Slow systems punish fast forcing; fast systems decay if slowed.
+
+## Phase‑Lock Threshold
+How much alignment is required before the movement “clicks” into sync.  
+Low threshold = easy lock.  
+High threshold = requires precision.
+
+## Oscillation Curve
+How the system behaves after a push:
+- **Damped:** returns to center  
+- **Stable:** oscillates within a band  
+- **Amplifying:** oscillations grow unless managed  
+
+## Required Force
+What must be applied (effort, resources, attention) to alter the trajectory.
+
+## Required Timing
+What moment or window makes the movement clean instead of costly.
+
+## Next Micro‑Move
+The smallest observable action that advances the shift.
+
+## Done‑State
+What “movement achieved” looks like in the real world.
+```
+
+---
+
+## Why v0.4 matters
+
+This is the first Movement Card that models **temporal resonance** — the phenomenon that determines whether a movement _amplifies_, _stalls_, or _destroys itself_.
+
+v0.4 gives you:
+
+- **Resonant frequency** — the natural tempo of the movement
+- **Phase‑locking thresholds** — when alignment “snaps” into place
+- **Oscillation curves** — how the system behaves after perturbation
+- **Full integration with Recovery v0.4** — movement and recovery as a coupled temporal system
+
+This is the first version that behaves like a **living rhythm**, not a static decision.
+
+---
+
+If you want, I can cut **Movement Card v0.5** next — the version that introduces **multi‑movement interference**, **harmonic stacking**, and **cross‑movement resonance fields** so you can model multiple simultaneous shifts inside the Xi substrate.

@@ -1,0 +1,82 @@
+---
+title: Ah — **that explains the entire symptom profile.**
+timestamp: 2026-05-04T23:56:00
+uid: 9125a579
+source: 202605042356.md
+tags: [struct:list]
+---
+Ah — **that explains the entire symptom profile.**
+
+If your plugin folder contains only:
+
+```
+manifest.json
+styles.css
+```
+
+then Obsidian is doing exactly what it should:
+
+### ✔️ It loads the plugin
+
+### ✔️ It shows the plugin in the list
+
+### ✔️ It shows the settings tab (“Setting #1 — It’s a secret”)
+
+### ❌ It runs **no code at all**
+
+### ❌ It registers **no commands**
+
+### ❌ It adds **no ribbon icons**
+
+### ❌ It performs **no behavior**
+
+Because there is **no main.js**, there is nothing for Obsidian to execute.
+
+This is the equivalent of installing a car with a dashboard and a paint job but **no engine**.
+
+---
+
+## 🧩 Why Obsidian still shows a settings tab
+
+The settings tab is declared in the manifest, so Obsidian creates the UI shell even if the plugin has no code behind it.
+
+This is why you see:
+
+- **Plugin appears in the list**
+- **Toggle works**
+- **Settings tab appears**
+- **Nothing else happens**
+
+This is the exact behavior of a plugin with metadata but no runtime.
+
+---
+
+## 🎯 What you need next
+
+You need a **main.js** (or a compiled output from main.ts) inside the plugin folder.
+
+The minimal working plugin requires **three files**:
+
+```
+manifest.json
+main.js
+styles.css   (optional)
+```
+
+Without `main.js`, Obsidian has nothing to execute.
+
+---
+
+## 🛠️ If you want, I can generate a clean, correct `main.js` for you
+
+I can give you:
+
+- a minimal “Hello World” plugin
+- a plugin with a command
+- a plugin with a ribbon icon
+- a plugin with settings
+- or a full plugin chassis ready for expansion
+
+Just tell me which style you want and I’ll produce the exact file.
+
+You’re one file away from a fully functional plugin.

@@ -1,0 +1,217 @@
+{
+  "nodes": [
+    {
+      "id": "op-layer",
+      "type": "text",
+      "text": "Operator Layer\n(invokes queries/tests)",
+      "x": 0,
+      "y": -600,
+      "width": 260,
+      "height": 80
+    },
+    {
+      "id": "aql-tr",
+      "type": "text",
+      "text": "AQL Test Runner\n(Execution Harness, TR)",
+      "x": 0,
+      "y": -480,
+      "width": 260,
+      "height": 80
+    },
+    {
+      "id": "aql-engine",
+      "type": "text",
+      "text": "AQL Engine\n(Query Parser + Resolver)",
+      "x": 0,
+      "y": -360,
+      "width": 260,
+      "height": 80
+    },
+    {
+      "id": "lea",
+      "type": "text",
+      "text": "LEA\n(Linter Engine Architecture)\nAQL + AEP + LN Integration",
+      "x": 0,
+      "y": -240,
+      "width": 260,
+      "height": 100
+    },
+    {
+      "id": "aep",
+      "type": "text",
+      "text": "AEP\n(Execution Protocol)\nDetects + Escalates",
+      "x": 0,
+      "y": -100,
+      "width": 260,
+      "height": 100
+    },
+    {
+      "id": "sel",
+      "type": "text",
+      "text": "SEL\n(Substrate Enforcement Layer)\nInvariant-level checks",
+      "x": 0,
+      "y": 40,
+      "width": 260,
+      "height": 100
+    },
+    {
+      "id": "substrate",
+      "type": "text",
+      "text": "Xi / Razor Substrate\n(Object graph + relations)",
+      "x": 0,
+      "y": 200,
+      "width": 260,
+      "height": 100
+    },
+    {
+      "id": "mem-operator",
+      "type": "text",
+      "text": "[Operator Membrane]\n- AQL-TR\n- AQL Engine\nDeterminism / Reproducibility / Canonical Execution",
+      "x": -420,
+      "y": -420,
+      "width": 320,
+      "height": 160
+    },
+    {
+      "id": "mem-protocol",
+      "type": "text",
+      "text": "[Protocol Membrane]\n- LEA\n- AEP\nRule-binding / Escalation / Reconciliation",
+      "x": -420,
+      "y": -180,
+      "width": 320,
+      "height": 160
+    },
+    {
+      "id": "mem-substrate",
+      "type": "text",
+      "text": "[Substrate Membrane]\n- SEL\n- Xi/Razor substrate\nInvariants / Object-Edge Legality / Structural Truth",
+      "x": -420,
+      "y": 120,
+      "width": 340,
+      "height": 160
+    },
+    {
+      "id": "eid-invariants",
+      "type": "text",
+      "text": "EID Integration Invariants\n- EID-INV-01: No engine mutates substrate without SEL\n- EID-INV-02: Deterministic outputs for identical inputs\n- EID-INV-03: Escalation via AEP canonical pathways\n- EID-INV-04: LEA lints before AEP enforcement\n- EID-INV-05: AQL Engine does not infer/coerce missing structure\n- EID-INV-06: Substrate acyclic in enforcement pathways",
+      "x": 420,
+      "y": -140,
+      "width": 520,
+      "height": 260
+    },
+    {
+      "id": "razor-loop-label",
+      "type": "text",
+      "text": "Razor Loop\n(Reconcile / Split / Elevate)",
+      "x": 420,
+      "y": 200,
+      "width": 260,
+      "height": 100
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-op-aqltr",
+      "fromNode": "op-layer",
+      "toNode": "aql-tr",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-aqltr-aqleng",
+      "fromNode": "aql-tr",
+      "toNode": "aql-engine",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-aqleng-lea",
+      "fromNode": "aql-engine",
+      "toNode": "lea",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "emits object/edge ops"
+    },
+    {
+      "id": "e-lea-aep",
+      "fromNode": "lea",
+      "toNode": "aep",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "validates"
+    },
+    {
+      "id": "e-aep-sel",
+      "fromNode": "aep",
+      "toNode": "sel",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "enforces"
+    },
+    {
+      "id": "e-sel-substrate",
+      "fromNode": "sel",
+      "toNode": "substrate",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "label": "final gate"
+    },
+    {
+      "id": "e-razor-loop",
+      "fromNode": "substrate",
+      "toNode": "aql-engine",
+      "fromSide": "right",
+      "toSide": "right",
+      "label": "Razor Loop"
+    },
+    {
+      "id": "e-mem-op-aqltr",
+      "fromNode": "mem-operator",
+      "toNode": "aql-tr",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-mem-op-aqleng",
+      "fromNode": "mem-operator",
+      "toNode": "aql-engine",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-mem-prot-lea",
+      "fromNode": "mem-protocol",
+      "toNode": "lea",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-mem-prot-aep",
+      "fromNode": "mem-protocol",
+      "toNode": "aep",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-mem-sub-sel",
+      "fromNode": "mem-substrate",
+      "toNode": "sel",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-mem-sub-substrate",
+      "fromNode": "mem-substrate",
+      "toNode": "substrate",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-substrate-razorlabel",
+      "fromNode": "substrate",
+      "toNode": "razor-loop-label",
+      "fromSide": "right",
+      "toSide": "left"
+    }
+  ]
+}

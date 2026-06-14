@@ -1,0 +1,264 @@
+{
+  "main": {
+    "id": "9a854b1089d6fbf7",
+    "type": "split",
+    "children": [
+      {
+        "id": "afc33d70e01d6b23",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5e19f3bc9786a3ed",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          },
+          {
+            "id": "46803ca33c59db0f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Inventory/code/docs/Python Prototype Boundaries.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Python Prototype Boundaries"
+            }
+          },
+          {
+            "id": "eab35d775bea29c7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Inventory/code/docs/Logseq Python Integration.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Logseq Python Integration"
+            }
+          },
+          {
+            "id": "27f1b435759932e7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Inventory/inventoryd/scanner_engine.py.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "scanner_engine.py"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6a53fe8f4bdea6ba",
+    "type": "split",
+    "children": [
+      {
+        "id": "d22a784fb6d11570",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0c73e7fcaaeb326f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "6018a530e0283ebd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "660fd73e41f5dba7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300.5
+  },
+  "right": {
+    "id": "e5829d7195922f86",
+    "type": "split",
+    "children": [
+      {
+        "id": "a38ad2f15a0ce226",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "af652f7f8a4dfc6b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Inventory/code/python/layout.py.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for layout.py"
+            }
+          },
+          {
+            "id": "021db5b765e794fe",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Inventory/code/python/layout.py.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from layout.py"
+            }
+          },
+          {
+            "id": "18fd9e1d63aa8c18",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1281d2359c4addd7",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "f28b623a28808698",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Inventory/code/python/layout.py.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of layout.py"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "27f1b435759932e7",
+  "lastOpenFiles": [
+    "Inventory/code/docs/Obisdian TUI Keymap.md",
+    "Inventory/code/python/layout.py.md",
+    "Inventory/code/python/operator_scan_cards.py.md",
+    "Inventory/code/docs/confirming a stable hold point.md",
+    "Inventory/code/docs/Printhandler with Formatting and color.md",
+    "Inventory/code/docs/Generate Python TUI Stubs.md",
+    "Inventory/code/docs/Full Category Taxonomy Expansion.md",
+    "Inventory/code/docs/Cannonical operator-actions.yaml skeleton.md",
+    "Inventory/code/docs/Generate_operator_actions.py Setup.md",
+    "Inventory/code/docs/Tui Event Loop Module Design.md",
+    "Inventory/code/docs/Event Driven TUI Module Design.md",
+    "Inventory/code/docs/operator_scan_cards.py  overview.md",
+    "Inventory/code/docs/temporal Scan Moduled for ScannerEngine.md",
+    "Inventory/code/docs/commit_membrane.py Overview.md",
+    "Inventory/code/docs/Obsidian Integration Upgrade.md",
+    "Inventory/code/docs/Logseq Python Integration.md",
+    "Inventory/code/docs/Drop Integration_state.py.md",
+    "Inventory/code/docs/Drop index_state.py file.md",
+    "Inventory/code/docs/chronoindex Vault index.md",
+    "Inventory/code/docs/operator_scan_cards.py overview.md",
+    "Inventory/code/docs/Three Pane UI Skeleton.md",
+    "Inventory/code/docs/Untitled",
+    "Inventory/code/docs/scanner_engine_.py overview.md",
+    "Inventory/code/docs/Starting Python Module Dev.md",
+    "Inventory/code/docs/Operator Checkpoint Summary.md",
+    "Inventory/code/docs/Operator C.md",
+    "Inventory/code/docs/Untitled 2.md",
+    "Inventory/code/python/tui_event_loop",
+    "Inventory/code/yaml",
+    "Inventory/code/rust/src/app",
+    "Inventory/code/rust/src/tui",
+    "Inventory/code/rust/src",
+    "Inventory/code/rust",
+    "Inventory/code/python",
+    "Inventory/surfaces",
+    "Inventory/inventoryd/util"
+  ]
+}

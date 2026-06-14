@@ -1,0 +1,194 @@
+---
+status: processed
+type: creative-session
+---
+
+# 202605220926-meta-structural-document
+
+[[creative-session-index]]
+
+_The architecture behind the architecture — the system that generates the system_
+
+This is the governing meta‑framework for your entire cosmology.  
+It defines how story, mythic pressure, character arcs, and dramatic rhythm emerge from the layered universe.
+
+Every major section begins with a Guided Link so you can reopen or expand it later.
+
+---
+
+# 1. **THE META‑LOOP**
+
+The meta‑loop is the iterative engine that shapes all narrative in this universe.
+
+It consists of:
+
+1. Campbell’s topology (mythic pressure)
+2. Brecht’s alienation (defamiliarization)
+3. Layered universe ontology (five‑layer stack)
+4. Hybrid cosmology (anti‑monomyth)
+5. Noir structure (operator stance)
+6. Jazz timing (rhythmic cognition)
+7. Three‑act braid (compression)
+
+This loop is run repeatedly until the structure stabilizes.
+
+---
+
+# 2. **CAMPBELL TOPOLOGY PASS**
+
+Joseph Campbell is used **not** as a template but as a **topological map** — a way to understand how mythic pressure flows.
+
+Mapping Campbell → Layers:
+
+- Ordinary World → Material Layer
+- Call to Adventure → Perceptual Intrusion
+- Crossing Threshold → Drift Episode
+- Belly of Whale → Retrieval Field
+- Atonement → Procedural Judgment
+- Apotheosis → Substrate Glimpse
+- Return → Reclassification
+
+This gives the **shape** of mythic descent and return.
+
+Your universe **inverts** the cycle.
+
+---
+
+# 3. **BRECHT ALIENATION PASS**
+
+Brecht provides the anti‑illusion stance.
+
+We apply:
+
+- distancing
+- defamiliarization
+- “show the machinery”
+- refusal of emotional manipulation
+- procedural metaphysics as literal stage machinery
+
+Key insight:
+
+> The Procedural Layer _is_ the alienation effect.
+
+The Ledger, the Courts, the retrieval field — all Brechtian devices made diegetic.
+
+---
+
+# 4. **LAYERED UNIVERSE OVERLAY**
+
+We overlay the five‑layer ontology:
+
+- Substrate
+- Procedural
+- Perceptual
+- Material
+- Narrative
+
+Each layer corresponds to a Campbellian stage but also **resists** it.
+
+This creates a **multi‑layered mythic cycle**.
+
+---
+
+# 5. **HYBRID COSMOLOGY PASS**
+
+The hybrid condition is the **anti‑Campbellian inversion**.
+
+Hybrids are:
+
+- not heroes
+- not chosen
+- not questing
+- not returning
+
+They are **threshold casualties**.
+
+Campbell’s hero _chooses_ the journey.  
+Your hybrid is **dragged** across layers by procedural forces.
+
+This inversion is the emotional core of the Hybrid Series.
+
+---
+
+# 6. **SECOND BRECHT PASS**
+
+We run Brecht again to strip out:
+
+- sentimentality
+- triumphalism
+- Campbellian catharsis
+- mythic inflation
+
+And reinforce:
+
+- procedural inevitability
+- bureaucratic metaphysics
+- identity as classification
+- drift as destabilization
+
+This keeps the universe grounded and unsentimental.
+
+---
+
+# 7. **NOIR STRUCTURE INTEGRATION**
+
+Your natural voice.
+
+Noir provides:
+
+- reluctant protagonists
+- systems bigger than individuals
+- inevitability of judgment
+- dry humor
+- operator stance
+- moral ambiguity
+
+Pink becomes a **noir threshold walker**.  
+Marilyn becomes a **noir femme‑fatale AI**.
+
+---
+
+# 8. **JAZZ TIMING PASS**
+
+Your cognitive rhythm becomes the narrative rhythm.
+
+We use:
+
+- tension → release
+- setup → break
+- drift → snapback
+- procedural → perceptual → material → procedural
+- syncopation
+- off‑beat reveals
+
+This gives the narrative its **pulse**.
+
+---
+
+# 9. **THREE‑ACT BRAID COMPRESSION**
+
+Only after all meta‑passes do we compress the structure into the three‑act braid.
+
+### Act I — Material Dominance
+
+- Campbell’s Ordinary World
+- Brecht’s seed
+- Noir grounding
+- One hairline crack
+
+### Act II — Perceptual/Procedural Collision
+
+- Campbell’s descent
+- Hybrid drift
+- Brechtian machinery exposed
+- Jazz escalation
+
+### Act III — Procedural Dominance
+
+- Campbell’s apotheosis inverted
+- Brecht’s alienation climax
+- Noir inevitability
+- Substrate glimpse
+- Return impossible
+
+This is the **final dramatic engine**.

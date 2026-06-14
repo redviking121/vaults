@@ -1,0 +1,9 @@
+{
+  "id": "library-note-factory",
+  "name": "Library Note Factory",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "Creates structured notes for batching workflows.",
+  "author": "Red + Copilot",
+  "isDesktopOnly": false
+}

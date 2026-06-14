@@ -1,0 +1,75 @@
+---
+title: **Rapid Triage — Short‑Form Version (Operator Cut)**
+timestamp: 2026-05-05T00:10:00
+uid: 550662d5
+source: 202605050010.md
+tags: [struct:question, status:actionable, status:blocked, struct:list]
+---
+**Rapid Triage — Short‑Form Version (Operator Cut)**  
+**Takeaway:** This is the compressed, grab‑handle variant you can run in under 20 seconds. No ceremony, no drift.
+
+---
+
+### **🧭 1. Identify the State (3 seconds)**
+
+Say it _out loud_ or in your head — one word only.
+
+- **Overload** — too much input
+- **Confusion** — unclear next step
+- **Stall** — stuck, looping
+- **Threat** — something feels wrong
+- **Damage** — something broke
+- **Recovery** — stabilizing
+
+Pick the closest match. Don’t negotiate with yourself.
+
+---
+
+### **🔧 2. Apply the Correct Move (10 seconds)**
+
+Each state has one action only.
+
+- **Overload → Cut**  
+    Remove one input stream. Close tab, silence channel, stop feed.
+    
+- **Confusion → Name**  
+    Produce a headline: _“What’s the actual question?”_
+    
+- **Stall → Move**  
+    One physical action: stand, breathe, walk 10 steps, return.
+    
+- **Threat → Verify**  
+    Check for real‑world impact: _“Is anything actually happening?”_
+    
+- **Damage → Contain**  
+    Stop the spread. Freeze changes. Halt automation. No fixes yet.
+    
+- **Recovery → Anchor**  
+    State the next safe action: _“The next correct move is X.”_
+    
+
+---
+
+### **🪝 3. Re‑Acquire Control (5–7 seconds)**
+
+Use one anchor only:
+
+- **Breath:** slow exhale
+- **Body:** relax jaw, drop shoulders
+- **Sight:** pick one fixed point
+- **Language:** “I’m back on the rail.”
+
+---
+
+### **📌 4. Exit Condition**
+
+You’re done when you can answer:
+
+**“What is the next non‑negotiable action?”**
+
+If you can name it cleanly, triage is complete.  
+If not, loop once — never twice.
+
+---
+
+If you want, I can also generate a **pocket version** (fits on a 3×5 card) or a **mnemonic-coded variant** that you can run even under heavy load.

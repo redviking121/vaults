@@ -1,0 +1,10 @@
+{
+  "id": "razor-skeleton",
+  "name": "Razor Skeleton",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Baseline Razor Skeleton plugin chassis for pipeline experiments.",
+  "author": "Red",
+  "authorUrl": "",
+  "isDesktopOnly": true
+}

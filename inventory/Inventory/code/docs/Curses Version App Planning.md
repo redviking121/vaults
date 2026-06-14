@@ -1,0 +1,203 @@
+Red —  
+locking in Python as the **rapid‑proto layer** means we can finally draw the **true boundaries** of the prototype. These boundaries are what keep the prototype fast, disposable, and structurally clean — without letting it metastasize into a half‑baked substrate.
+
+Below is the **operator‑grade definition** of the Python prototype boundaries.  
+This is the map your AI staff will follow so the prototype stays a prototype and doesn’t drift into Rust territory.
+
+---
+
+# ⭐ Python Prototype Boundaries (Operator‑Grade)
+
+The Python layer exists for **one purpose**:
+
+> **Discover the shape of the unified systems inventory and the TUI ergonomics — nothing more.**
+
+Everything below is designed to keep the prototype fast, flexible, and non‑binding.
+
+---
+
+## 🟦 1. **Scope Boundary** — What Python _will_ and _will not_ do
+
+### Python _will_ handle:
+
+- **Inventory scanning**  
+    (directories, packages, services, configs, versions)
+- **Data modeling**  
+    (lightweight classes, dicts, JSON)
+- **Search + query logic**  
+    (filters, tags, fuzzy match)
+- **TUI rendering + navigation**  
+    (curses/Textual/Rich)
+- **Operator workflows**  
+    (view, inspect, edit, diff, sync)
+- **Rapid iteration**  
+    (AI‑assisted code generation, fast refactors)
+
+### Python _will not_ handle:
+
+- **Long‑term persistence**  
+    (no SQLite schema design, no migrations)
+- **Concurrency or daemonization**  
+    (no background services, no async orchestration)
+- **Binary packaging**  
+    (no PyInstaller, no wheels, no distro integration)
+- **Performance‑critical operations**  
+    (graph traversal, heavy indexing)
+- **Security‑critical operations**  
+    (privilege boundaries, sandboxing)
+- **Cross‑platform guarantees**  
+    (prototype only needs to run on your machines)
+
+These are **Rust’s domain** later.
+
+---
+
+## 🟦 2. **Data Boundary** — What the prototype stores
+
+### Python stores:
+
+- **Inventory snapshots** (JSON)
+- **Session state** (current view, filters)
+- **Temporary caches** (in‑memory dicts)
+- **Operator logs** (simple text)
+
+### Python does _not_ store:
+
+- Long‑term history
+- Immutable records
+- Audit trails
+- Multi‑user state
+- Binary formats
+- Structured schemas
+
+The prototype’s data is **throwaway**.  
+Rust will define the real schema.
+
+---
+
+## 🟦 3. **Architecture Boundary** — How the prototype is shaped
+
+### Python architecture:
+
+- **Flat modules**  
+    (`inventory.py`, `tui.py`, `models.py`, `search.py`)
+- **Minimal classes**  
+    (simple containers, not frameworks)
+- **Functional core**  
+    (pure functions where possible)
+- **Loose coupling**  
+    (no deep inheritance, no complex patterns)
+- **Replaceable components**  
+    (every module can be rewritten in Rust later)
+
+### Python avoids:
+
+- Frameworks
+- ORMs
+- Dependency injection
+- Plugin systems
+- Event buses
+- Complex state machines
+
+The prototype must remain **light, legible, and disposable**.
+
+---
+
+## 🟦 4. **TUI Boundary** — What the Python TUI is allowed to do
+
+### Python TUI _will_:
+
+- Render panes
+- Handle keymaps
+- Display inventory results
+- Show metadata
+- Provide simple editing
+- Offer command palette
+- Support fuzzy search
+
+### Python TUI _will not_:
+
+- Implement advanced editors
+- Handle async updates
+- Manage background tasks
+- Provide animations or rich widgets
+- Guarantee terminal compatibility
+- Support plugins or extensions
+
+The TUI is for **ergonomic discovery**, not permanence.
+
+---
+
+## 🟦 5. **Performance Boundary** — What Python must not attempt
+
+Python must **not** attempt to be fast.  
+It must attempt to be **clear**.
+
+Avoid:
+
+- Large graph traversals
+- Heavy indexing
+- Real‑time updates
+- Multi‑threading
+- Large datasets in memory
+
+If something feels slow, that’s a **signal** for Rust later.
+
+---
+
+## 🟦 6. **Integration Boundary** — What Python connects to
+
+Python may integrate with:
+
+- Local filesystem
+- Simple subprocess calls
+- JSON files
+- Basic shell commands
+- Lightweight HTTP (optional)
+
+Python must **not** integrate with:
+
+- System services
+- Daemons
+- Kernel interfaces
+- Network discovery
+- Hardware APIs
+- Package managers
+- Cloud APIs
+
+Those belong to the Rust substrate.
+
+---
+
+## 🟦 7. **Exit Boundary** — When Python hands off to Rust
+
+Python hands off when:
+
+- The inventory model stabilizes
+- The TUI ergonomics are validated
+- The operator workflows are known
+- The data schema stops changing
+- The performance ceiling is hit
+- The prototype stops teaching you new things
+
+At that moment, Rust becomes the substrate and Python becomes the **reference implementation**.
+
+---
+
+# ⭐ Summary: The Python Prototype Exists to Discover Shape, Not to Last
+
+You now have the **hard boundaries** that keep the prototype from drifting into substrate territory.  
+This is how you maintain velocity without sacrificing long‑term stability.
+
+---
+
+## Your next move
+
+Do you want me to:
+
+- **Draft the Python module layout**
+- **Define the inventory data model**
+- **Specify the TUI keymap + pane layout**
+- **Write the first prototype functions**
+
+Pick the lane and I’ll build it.

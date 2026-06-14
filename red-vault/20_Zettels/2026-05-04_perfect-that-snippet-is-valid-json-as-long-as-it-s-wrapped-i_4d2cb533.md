@@ -1,0 +1,56 @@
+---
+title: Perfect — that snippet is valid JSON **as long as it’s wrapped in braces** and p
+timestamp: 2026-05-04T23:55:00
+uid: 4d2cb533
+source: 202605042355.md
+tags: [struct:list]
+---
+Perfect — that snippet is valid JSON **as long as it’s wrapped in braces** and placed in the correct folder.
+
+Here is the fully correct `manifest.json` exactly as Obsidian expects it:
+
+```
+{
+  "id": "sample-plugin",
+  "name": "Sample Plugin",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "Demonstrates some of the capabilities of the Obsidian API.",
+  "author": "Obsidian",
+  "authorUrl": "https://obsidian.md",
+  "fundingUrl": "https://obsidian.md/pricing",
+  "isDesktopOnly": false
+}
+```
+
+### Now confirm the folder structure
+
+Your vault should contain:
+
+```
+<VaultRoot>/.obsidian/plugins/sample-plugin/
+    manifest.json
+    main.js
+    styles.css   ← optional
+```
+
+Two things matter most:
+
+1. **Folder name must be exactly:**  
+    `sample-plugin`
+    
+2. **`manifest.json` `"id"` must match that folder name exactly.**
+    
+
+If either one is off by even one character, Obsidian will not load the plugin.
+
+### After placing it:
+
+Inside Obsidian:
+
+- Go to **Settings → Community Plugins**
+- Scroll down
+- You should see **Sample Plugin**
+- Toggle it on
+
+If it doesn’t appear, tell me your exact folder path and I’ll pinpoint the issue.

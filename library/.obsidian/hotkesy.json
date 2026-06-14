@@ -1,0 +1,38 @@
+{
+  "library-note-factory:create-session": [
+    {
+      "modifiers": ["Ctrl", "Shift"],
+      "key": "S"
+    }
+  ],
+  "library-note-factory:create-rfc": [
+    {
+      "modifiers": ["Ctrl", "Shift"],
+      "key": "R"
+    }
+  ],
+  "library-note-factory:create-battleplan": [
+    {
+      "modifiers": ["Ctrl", "Shift"],
+      "key": "B"
+    }
+  ],
+  "library-note-factory:create-grimoire": [
+    {
+      "modifiers": ["Ctrl", "Shift"],
+      "key": "G"
+    }
+  ],
+  "library-note-factory:create-ledger": [
+    {
+      "modifiers": ["Ctrl", "Shift"],
+      "key": "L"
+    }
+  ],
+  "library-note-factory:create-primitive": [
+    {
+      "modifiers": ["Ctrl", "Shift"],
+      "key": "P"
+    }
+  ]
+}

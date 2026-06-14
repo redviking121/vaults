@@ -1,0 +1,167 @@
+# Voltage‑Safe Batching Protocol  
+## Throughput Discipline for High‑Load Operations  
+Version: 0.1  
+Status: Live
+
+---
+
+## Purpose
+Define the rules, invariants, and safety constraints that allow the Library to process multiple note‑creation or note‑modification operations without:
+
+- race conditions  
+- double‑writes  
+- namespace collisions  
+- partial state commits  
+- operator‑induced drift  
+
+This protocol ensures that batching remains **frictionless**, **atomic**, and **voltage‑safe** even under sustained load.
+
+---
+
+## Operator Principles
+
+### 1. **One Intent → One Action**
+Every batch operation must resolve to a single, unambiguous action.  
+No branching. No modal shifts. No prompts.
+
+### 2. **Operator Mind‑State Preservation**
+Batching is a *braindead* operation.  
+The system must never force the operator to think, choose, or confirm.
+
+### 3. **Zero‑Friction Entry**
+A batch begins with a single keystroke.  
+A fully formed note appears in the correct location with correct metadata.  
+Operator types. Closes. Repeats.
+
+### 4. **No Cross‑Talk**
+Batch operations must not observe or depend on each other’s intermediate state.  
+Each operation is isolated until commit.
+
+---
+
+## System Invariants
+
+### **Invariant A — Atomicity**
+A batch operation is either:
+
+- fully committed, or  
+- fully rolled back  
+
+No partial writes.  
+No half‑formed notes.
+
+### **Invariant B — Namespace Integrity**
+All filenames, IDs, and metadata must be:
+
+- collision‑safe  
+- timestamp‑stable  
+- monotonic  
+
+If a collision is detected, the system must auto‑resolve without operator involvement.
+
+### **Invariant C — Order Preservation**
+Operations must commit in the exact order they were invoked.  
+No reordering.  
+No opportunistic parallelism.
+
+### **Invariant D — Non‑Destruction**
+No batch operation may overwrite or delete existing content unless explicitly designed to do so.
+
+---
+
+## Voltage‑Safe Execution Model
+
+### **Phase 1 — Pre‑Commit Buffering**
+All batch operations are staged in a temporary buffer:
+
+- filenames  
+- metadata  
+- folder paths  
+- timestamps  
+- content skeletons  
+
+Nothing touches the filesystem yet.
+
+### **Phase 2 — Integrity Scan**
+Before commit, the system checks:
+
+- namespace collisions  
+- missing directories  
+- malformed metadata  
+- timestamp drift  
+- plugin‑level constraints  
+
+If any anomaly is detected, the entire batch is paused and quarantined.
+
+### **Phase 3 — Atomic Commit**
+Operations are written to disk in strict order:
+
+1. create file  
+2. write metadata  
+3. write content  
+4. finalize timestamp  
+5. register in index (if applicable)
+
+Each step is atomic and reversible.
+
+### **Phase 4 — Post‑Commit Verification**
+The system verifies:
+
+- file exists  
+- metadata matches  
+- index updated  
+- no drift introduced  
+
+If verification fails, the system rolls back the affected operation and logs the anomaly.
+
+---
+
+## Failure Modes & Responses
+
+### **Mode 1 — Namespace Collision**
+**Response:** auto‑resolve with monotonic suffix  
+No operator involvement.
+
+### **Mode 2 — Timestamp Drift**
+**Response:** re‑stamp entire batch with synchronized clock
+
+### **Mode 3 — Partial Write Detected**
+**Response:** rollback and quarantine
+
+### **Mode 4 — Plugin Interference**
+**Response:** isolate plugin, retry batch in safe mode
+
+---
+
+## Operator‑Facing Guarantees
+
+- No prompts  
+- No decisions  
+- No interruptions  
+- No modal shifts  
+- No risk of double‑writes  
+- No risk of tearing the Library under load  
+
+Batching remains:
+
+- predictable  
+- reversible  
+- safe  
+- fast  
+- invisible  
+
+---
+
+## Implementation Notes (Plugin Layer)
+
+- All batch operations must route through a single command surface  
+- Pre‑commit buffer must be memory‑resident  
+- Commit pipeline must be synchronous  
+- Logging must be silent unless anomaly detected  
+- Rollback must be idempotent  
+
+---
+
+## Status
+**Live** — ready for integration with Layer‑43 Plugin Command Map.
+
