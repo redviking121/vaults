@@ -17,7 +17,8 @@ jobs:
         with:
           hugo-version: 'latest'
       - name: Build
-        run: hugo --minify
+        run: hugo --minify --config hugo.toml --themesDir themes --contentDir content --layoutDir layouts 
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
