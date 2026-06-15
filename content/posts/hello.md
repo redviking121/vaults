@@ -1,9 +1,4 @@
 ---
-title: "Hello"
-date: 2026-06-15
-summary: "This is my first post."
-draft: false
+title: "My Digital Garden"
+layout: "list"
 ---
-
-# Hello World
-This is the content of my vault.
