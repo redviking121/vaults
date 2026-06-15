@@ -1,5 +1,7 @@
+relativeURLs = true
 baseURL = 'https://redviking121.github.io/vaults/'
 languageCode = 'en-us'
+
 title = 'My Digital Garden'
 theme = 'PaperMod'
 
