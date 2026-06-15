@@ -6,16 +6,12 @@ theme = 'PaperMod'
 [params]
   defaultTheme = "dark"
   enableInlineShortcodes = true
+  mainSections = ["posts"]
 
-[params.homeInfoParams]
-  Title = "Welcome to my Garden"
-  Content = "A collection of thoughts, notes, and research."
+  [params.homeInfoParams]
+    Title = "Welcome to my Garden"
+    Content = "A collection of thoughts, notes, and research."
 
 [[params.socialIcons]]
   name = "github"
   url = "https://github.com/redviking121/vaults"
-
-[params]
-  defaultTheme = "dark"
-  # This stops users from switching back to light mode if you want to be strict
-  # disableThemeToggle = true
