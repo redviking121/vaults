@@ -1,5 +1,9 @@
 ---
-title: "My First Post"
+title: "Hello"
 date: 2026-06-15
-draft: true
+summary: "This is my first post."
+draft: false
 ---
+
+# Hello World
+This is the content of my vault.
