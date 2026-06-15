@@ -1,13 +1,13 @@
 name: Hugo
+
 on:
   push:
     branches:
       - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - uses: actions/checkout@v4
         with:
@@ -17,8 +17,10 @@ jobs:
         with:
           hugo-version: 'latest'
       - name: Build
-        run: hugo --minify --config hugo.toml --themesDir themes --contentDir content --layoutDir layouts 
-
+        run: |
+          echo "DEBUG: Checking file structure..."
+          ls -R
+          hugo --minify --config hugo.toml --themesDir themes --contentDir content --layoutDir layouts
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
